@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<report xmlns="http://www.eclipse.org/birt/2005/design" version="3.2.23" id="1">
+    <property name="createdBy">Eclipse BIRT Designer Version 4.2.3.v20131216-0430 Build &lt;4.2.3.v20131216-0430></property>
+    <property name="units">in</property>
+    <property name="iconFile">/templates/blank_report.gif</property>
+    <property name="eventHandlerClass">com.actuate.ps.mybirt.eventhandlers.OpenDesignReportAdapter</property>
+    <property name="bidiLayoutOrientation">ltr</property>
+    <property name="imageDPI">96</property>
+    <list-property name="libraries">
+        <structure>
+            <property name="fileName">myBIRT/myBIRT.rptlibrary</property>
+            <property name="namespace">myBIRT</property>
+        </structure>
+    </list-property>
+    <parameters>
+        <scalar-parameter name="pDesignFile" id="8">
+            <text-property name="promptText" key="PRM_FILENAME">Filename:</text-property>
+            <property name="valueType">dynamic</property>
+            <property name="dataSetName">DraftAndSavedDesigns</property>
+            <expression name="valueExpr" type="javascript">dataSetRow["filepath"]</expression>
+            <expression name="labelExpr" type="javascript">dataSetRow["Description"]</expression>
+            <property name="dataType">string</property>
+            <property name="distinct">true</property>
+            <list-property name="selectionList"/>
+            <property name="paramType">simple</property>
+            <property name="controlType">list-box</property>
+            <property name="mustMatch">true</property>
+            <property name="fixedOrder">true</property>
+            <structure name="format">
+                <property name="category">Unformatted</property>
+            </structure>
+        </scalar-parameter>
+    </parameters>
+    <data-sources>
+        <script-data-source name="ScriptedDataSource" id="10" extends="myBIRT.ScriptedDataSource"/>
+    </data-sources>
+    <data-sets>
+        <script-data-set name="ListDesignFiles_HomeFolder" id="11" extends="myBIRT.ListDesignFiles">
+            <list-property name="parameters">
+                <structure>
+                    <property name="name">folder</property>
+                    <property name="dataType">string</property>
+                    <property name="position">1</property>
+                    <expression name="defaultValue" type="javascript">'home'</expression>
+                    <property name="isInput">true</property>
+                    <property name="isOutput">false</property>
+                </structure>
+                <structure>
+                    <property name="name">filetype</property>
+                    <property name="dataType">string</property>
+                    <property name="position">2</property>
+                    <expression name="defaultValue" type="javascript">'rptdesign'</expression>
+                    <property name="isInput">true</property>
+                    <property name="isOutput">false</property>
+                </structure>
+            </list-property>
+        </script-data-set>
+        <script-data-set name="ListDesignFiles_DraftFolder" id="12" extends="myBIRT.ListDesignFiles">
+            <list-property name="parameters">
+                <structure>
+                    <property name="name">folder</property>
+                    <property name="dataType">string</property>
+                    <property name="position">1</property>
+                    <expression name="defaultValue" type="javascript">'draft'</expression>
+                    <property name="isInput">true</property>
+                    <property name="isOutput">false</property>
+                </structure>
+                <structure>
+                    <property name="name">filetype</property>
+                    <property name="dataType">string</property>
+                    <property name="position">2</property>
+                    <expression name="defaultValue" type="javascript">'rptdesign'</expression>
+                    <property name="isInput">true</property>
+                    <property name="isOutput">false</property>
+                </structure>
+            </list-property>
+        </script-data-set>
+        <derived-data-set extensionID="com.actuate.birt.data.union" name="DraftAndSavedDesigns" id="13">
+            <list-property name="computedColumns">
+                <structure>
+                    <property name="name">Description</property>
+                    <expression name="expression" type="javascript">var fn = row["filename"];&#13;
+&#13;
+if (row["filepath"].indexOf("/draft") > -1)&#13;
+	fn += " (Draft copy)";&#13;
+else&#13;
+	fn += " (Version " + row["version"] + ")";&#13;
+&#13;
+fn;</expression>
+                    <property name="dataType">string</property>
+                </structure>
+            </list-property>
+            <list-property name="columnHints">
+                <structure>
+                    <property name="columnName">filename</property>
+                    <property name="analysis">measure</property>
+                </structure>
+                <structure>
+                    <property name="columnName">extension</property>
+                    <property name="analysis">measure</property>
+                </structure>
+                <structure>
+                    <property name="columnName">filepath</property>
+                    <property name="analysis">measure</property>
+                </structure>
+                <structure>
+                    <property name="columnName">counter</property>
+                    <property name="analysis">measure</property>
+                </structure>
+                <structure>
+                    <property name="columnName">Description</property>
+                    <property name="analysis">attribute</property>
+                </structure>
+                <structure>
+                    <property name="columnName">version</property>
+                    <property name="analysis">measure</property>
+                </structure>
+            </list-property>
+            <list-property name="parameters">
+                <structure>
+                    <property name="name">ListDesignFiles_HomeFolder::filetype</property>
+                    <property name="dataType">string</property>
+                    <property name="position">1</property>
+                    <expression name="defaultValue">'rptdesign'</expression>
+                    <property name="isOptional">false</property>
+                    <property name="allowNull">false</property>
+                    <property name="isInput">true</property>
+                </structure>
+                <structure>
+                    <property name="name">ListDesignFiles_HomeFolder::folder</property>
+                    <property name="dataType">string</property>
+                    <property name="position">2</property>
+                    <expression name="defaultValue">'HOME'</expression>
+                    <property name="isOptional">false</property>
+                    <property name="allowNull">false</property>
+                    <property name="isInput">true</property>
+                </structure>
+                <structure>
+                    <property name="name">ListDesignFiles_DraftFolder::filetype</property>
+                    <property name="dataType">string</property>
+                    <property name="position">3</property>
+                    <expression name="defaultValue">'rptdesign'</expression>
+                    <property name="isOptional">false</property>
+                    <property name="allowNull">false</property>
+                    <property name="isInput">true</property>
+                </structure>
+                <structure>
+                    <property name="name">ListDesignFiles_DraftFolder::folder</property>
+                    <property name="dataType">string</property>
+                    <property name="position">4</property>
+                    <expression name="defaultValue">'../draft'</expression>
+                    <property name="isOptional">false</property>
+                    <property name="allowNull">false</property>
+                    <property name="isInput">true</property>
+                </structure>
+            </list-property>
+            <structure name="cachedMetaData">
+                <list-property name="resultSet">
+                    <structure>
+                        <property name="position">1</property>
+                        <property name="name">filename</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">2</property>
+                        <property name="name">extension</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">3</property>
+                        <property name="name">filepath</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">4</property>
+                        <property name="name">counter</property>
+                        <property name="dataType">integer</property>
+                    </structure>
+                    <structure>
+                        <property name="position">5</property>
+                        <property name="name">version</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">6</property>
+                        <property name="name">Description</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                </list-property>
+            </structure>
+            <simple-property-list name="inputDataSets">
+                <value>ListDesignFiles_HomeFolder</value>
+                <value>ListDesignFiles_DraftFolder</value>
+            </simple-property-list>
+            <xml-property name="queryText"><![CDATA[<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<tns:Union xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://schemas.actuate.com/birt/dataset_union.xsd" xmlns:tns="http://schemas.actuate.com/">
+<tns:DataSet name="ListDesignFiles_HomeFolder">
+<tns:Column name="filename"/>
+<tns:Column name="extension"/>
+<tns:Column name="filepath"/>
+<tns:Column name="counter"/>
+<tns:Column name="version"/>
+</tns:DataSet>
+<tns:DataSet name="ListDesignFiles_DraftFolder">
+<tns:Column name="filename"/>
+<tns:Column name="extension"/>
+<tns:Column name="filepath"/>
+<tns:Column name="counter"/>
+<tns:Column name="version"/>
+</tns:DataSet>
+</tns:Union>]]></xml-property>
+        </derived-data-set>
+    </data-sets>
+    <styles>
+        <style name="report" id="4">
+            <property name="fontFamily">sans-serif</property>
+            <property name="fontSize">10pt</property>
+        </style>
+        <style name="crosstab-cell" id="5">
+            <property name="borderBottomColor">#CCCCCC</property>
+            <property name="borderBottomStyle">solid</property>
+            <property name="borderBottomWidth">1pt</property>
+            <property name="borderLeftColor">#CCCCCC</property>
+            <property name="borderLeftStyle">solid</property>
+            <property name="borderLeftWidth">1pt</property>
+            <property name="borderRightColor">#CCCCCC</property>
+            <property name="borderRightStyle">solid</property>
+            <property name="borderRightWidth">1pt</property>
+            <property name="borderTopColor">#CCCCCC</property>
+            <property name="borderTopStyle">solid</property>
+            <property name="borderTopWidth">1pt</property>
+        </style>
+        <style name="crosstab" id="6">
+            <property name="borderBottomColor">#CCCCCC</property>
+            <property name="borderBottomStyle">solid</property>
+            <property name="borderBottomWidth">1pt</property>
+            <property name="borderLeftColor">#CCCCCC</property>
+            <property name="borderLeftStyle">solid</property>
+            <property name="borderLeftWidth">1pt</property>
+            <property name="borderRightColor">#CCCCCC</property>
+            <property name="borderRightStyle">solid</property>
+            <property name="borderRightWidth">1pt</property>
+            <property name="borderTopColor">#CCCCCC</property>
+            <property name="borderTopStyle">solid</property>
+            <property name="borderTopWidth">1pt</property>
+        </style>
+    </styles>
+    <page-setup>
+        <simple-master-page name="Simple MasterPage" id="2">
+            <page-footer>
+                <text id="3">
+                    <property name="contentType">html</property>
+                    <text-property name="content"><![CDATA[<value-of>new Date()</value-of>]]></text-property>
+                </text>
+            </page-footer>
+        </simple-master-page>
+    </page-setup>
+    <body>
+        <text id="9">
+            <expression name="bookmark" type="javascript">'output'</expression>
+            <property name="contentType">html</property>
+            <text-property name="content"><![CDATA[<VALUE-OF>reportContext.getGlobalVariable("OPENFILE");</VALUE-OF>]]></text-property>
+        </text>
+    </body>
+</report>

@@ -1,0 +1,34 @@
+body, select{font: normal 8pt tahoma;margin:0px}
+
+/* Drag and drop formatting */
+.drag1 {background-color:#efefef;background-image:url(../images/draggablebgnd.png);width:40px;border-top: 1px solid #999999;border-left: 1px solid #999999;border-right: 2px solid #999999;border-bottom: 2px solid #999999;cursor:pointer;text-align:center; font: normal 8pt tahoma; margin:5px;position:relative}
+.slotX {border: 1px dotted #c0c0c0}
+.slotX.hover1 {background-image:url(../images/stripes.png);border:2px solid #999999}
+.slot {border: 1px solid white}
+.slot.hover1 {background-image:url(../images/stripes.png)}
+.emptyslot {background-image:url(../images/feintstripes.png)}
+.debug {border-top: 1px solid black;border-left: 1px solid black;border-right: 2px solid black;border-bottom: 2px solid black; background-color:pink}
+
+/* Menu buttons */
+.menubutton{cursor:pointer; margin-left:5px; border-width:0px}
+.menubutton:hover{background-color:#f0f0f0}
+.buttondisabled{cursor:default}
+/* IE Fix  - needed ?*/
+.highlight{background-color:yellow}
+
+/* Alignment dialog */
+.alignment_button {height:18px; width:18px; border: 1px solid white; text-align:center; cursor:pointer}
+.alignment_button img{vertical-align: middle; text-align:center}
+.selected_alignment {border: 1px solid red;}
+
+/* Override default parameter screen styles */
+.progress_animation, .progress_animation img, .actuateParameterContainer .paramTable, .actuateParameterContainer .paramTable td, .actuateParameterContainer .paramTable td fieldset, .actuateParameterContainer .paramTable td b, .actuateParameterContainer .navSelector a, .actuateParameterContainer .navSelector img, .actuateParameterContainer .monthDays, .actuateParameterContainer .monthDays td, .actuateParameterContainer input.checkbox, .actuateParameterContainer input.radio {
+	background-color:white !important; 
+}
+
+/* Editor panel style*/
+#componentbar {background-image:url(../images/sidebarmiddle.png)}
+.topbar {border:1px solid #DDDDDD; background-image:url(../images/topbarbgnd.png);height:35px}
+.panel{}
+
+

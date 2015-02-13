@@ -1,0 +1,373 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<library xmlns="http://www.eclipse.org/birt/2005/design" version="3.2.23" id="1">
+    <property name="createdBy">Eclipse BIRT Designer Version 3.7.2.v20121022-1705 Build &lt;3.7.2.v20121022-1705></property>
+    <list-property name="userProperties">
+        <structure>
+            <property name="name">__LogFile</property>
+            <property name="type">string</property>
+        </structure>
+        <structure>
+            <property name="name">__LogLevel</property>
+            <property name="type">string</property>
+        </structure>
+        <structure>
+            <property name="name">__ApplicationName</property>
+            <property name="type">string</property>
+        </structure>
+        <structure>
+            <property name="name">__LocalRepository</property>
+            <property name="type">string</property>
+        </structure>
+    </list-property>
+    <property name="__LogFile">c:/temp/myBIRT.log</property>
+    <property name="__LogLevel">FINER</property>
+    <property name="__LocalRepository">C:\Andrew\work\projects\_eclipse\myBIRT2.8_workspace\reports</property>
+    <simple-property-list name="includeResource">
+        <value>myBIRT/myBIRT</value>
+    </simple-property-list>
+    <list-property name="scriptLibs">
+        <structure>
+            <property name="name">myBIRT/myBIRT.jar</property>
+        </structure>
+    </list-property>
+    <property name="units">in</property>
+    <property name="theme">_defaultTheme</property>
+    <parameters>
+        <scalar-parameter name="__Mode" id="340">
+            <property name="hidden">true</property>
+            <property name="valueType">static</property>
+            <property name="dataType">string</property>
+            <property name="distinct">true</property>
+            <simple-property-list name="defaultValue">
+                <value type="constant">View</value>
+            </simple-property-list>
+            <list-property name="selectionList">
+                <structure>
+                    <property name="value">View</property>
+                </structure>
+                <structure>
+                    <property name="value">Edit</property>
+                </structure>
+                <structure>
+                    <property name="value">Components1</property>
+                </structure>
+                <structure>
+                    <property name="value">Components2</property>
+                </structure>
+                <structure>
+                    <property name="value">Unlock</property>
+                </structure>
+                <structure>
+                    <property name="value">Lock</property>
+                </structure>
+                <structure>
+                    <property name="value">Detach</property>
+                </structure>
+            </list-property>
+            <property name="paramType">simple</property>
+            <property name="controlType">list-box</property>
+            <property name="mustMatch">true</property>
+            <property name="fixedOrder">true</property>
+            <structure name="format">
+                <property name="category">Unformatted</property>
+            </structure>
+        </scalar-parameter>
+        <scalar-parameter name="__StructureChange" id="346">
+            <property name="hidden">true</property>
+            <property name="valueType">static</property>
+            <property name="isRequired">false</property>
+            <property name="dataType">string</property>
+            <property name="distinct">true</property>
+            <list-property name="selectionList"/>
+            <property name="paramType">simple</property>
+            <property name="controlType">text-box</property>
+            <structure name="format">
+                <property name="category">Unformatted</property>
+            </structure>
+        </scalar-parameter>
+        <scalar-parameter name="__SaveAs" id="347">
+            <property name="hidden">true</property>
+            <property name="valueType">static</property>
+            <property name="isRequired">false</property>
+            <property name="dataType">string</property>
+            <property name="distinct">true</property>
+            <list-property name="selectionList"/>
+            <property name="paramType">simple</property>
+            <property name="controlType">text-box</property>
+            <structure name="format">
+                <property name="category">Unformatted</property>
+            </structure>
+        </scalar-parameter>
+    </parameters>
+    <data-sources>
+        <script-data-source name="ScriptedDataSource" id="354"/>
+    </data-sources>
+    <data-sets>
+        <script-data-set name="ListDesignFiles" id="355">
+            <property name="eventHandlerClass">com.actuate.ps.mybirt.eventhandlers.FilelistDataSetAdapter</property>
+            <list-property name="resultSetHints">
+                <structure>
+                    <property name="position">1</property>
+                    <property name="name">filename</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">2</property>
+                    <property name="name">extension</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">3</property>
+                    <property name="name">filepath</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">4</property>
+                    <property name="name">counter</property>
+                    <property name="dataType">integer</property>
+                </structure>
+                <structure>
+                    <property name="position">5</property>
+                    <property name="name">version</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">6</property>
+                    <property name="name">localname</property>
+                    <property name="dataType">string</property>
+                </structure>
+            </list-property>
+            <list-property name="columnHints">
+                <structure>
+                    <property name="columnName">filename</property>
+                    <property name="analysis">measure</property>
+                </structure>
+                <structure>
+                    <property name="columnName">extension</property>
+                    <property name="analysis">measure</property>
+                </structure>
+                <structure>
+                    <property name="columnName">filepath</property>
+                    <property name="analysis">measure</property>
+                </structure>
+                <structure>
+                    <property name="columnName">counter</property>
+                    <property name="analysis">measure</property>
+                </structure>
+                <structure>
+                    <property name="columnName">version</property>
+                    <property name="analysis">measure</property>
+                </structure>
+                <structure>
+                    <property name="columnName">localname</property>
+                    <property name="analysis">dimension</property>
+                </structure>
+            </list-property>
+            <list-property name="parameters">
+                <structure>
+                    <property name="name">folder</property>
+                    <property name="dataType">string</property>
+                    <property name="position">1</property>
+                    <expression name="defaultValue" type="javascript">'../designs'</expression>
+                    <property name="isInput">true</property>
+                    <property name="isOutput">false</property>
+                </structure>
+                <structure>
+                    <property name="name">filetype</property>
+                    <property name="dataType">string</property>
+                    <property name="position">2</property>
+                    <expression name="defaultValue" type="javascript">'rptdesign'</expression>
+                    <property name="isInput">true</property>
+                    <property name="isOutput">false</property>
+                </structure>
+            </list-property>
+            <structure name="cachedMetaData">
+                <list-property name="resultSet">
+                    <structure>
+                        <property name="position">1</property>
+                        <property name="name">filename</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">2</property>
+                        <property name="name">extension</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">3</property>
+                        <property name="name">filepath</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">4</property>
+                        <property name="name">counter</property>
+                        <property name="dataType">integer</property>
+                    </structure>
+                    <structure>
+                        <property name="position">5</property>
+                        <property name="name">version</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">6</property>
+                        <property name="name">localname</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                </list-property>
+            </structure>
+            <property name="dataSource">ScriptedDataSource</property>
+        </script-data-set>
+    </data-sets>
+    <themes>
+        <theme name="_defaultTheme" id="4"/>
+    </themes>
+    <components>
+        <grid name="_WarningLocked" id="356">
+            <list-property name="userProperties">
+                <structure>
+                    <property name="name">__Width</property>
+                    <property name="type">integer</property>
+                </structure>
+            </list-property>
+            <property name="__Width">2</property>
+            <property name="width">19cm</property>
+            <column id="357"/>
+            <row id="358">
+                <cell id="359">
+                    <property name="backgroundColor">#EBEBEB</property>
+                    <property name="paddingTop">2pt</property>
+                    <property name="paddingLeft">2pt</property>
+                    <property name="paddingBottom">2pt</property>
+                    <property name="paddingRight">2pt</property>
+                    <property name="textAlign">center</property>
+                    <grid name="NewGrid111" id="790">
+                        <column id="791"/>
+                        <row id="793">
+                            <property name="verticalAlign">top</property>
+                            <cell id="794">
+                                <property name="textAlign">center</property>
+                                <property name="verticalAlign">top</property>
+                                <image name="NewImage32" id="2042">
+                                    <property name="display">inline</property>
+                                    <property name="height">32px</property>
+                                    <property name="width">32px</property>
+                                    <property name="source">file</property>
+                                    <expression name="uri" type="constant">myBIRT/images/sign_warning.png</expression>
+                                </image>
+                                <label name="NewLabel" id="360">
+                                    <property name="fontFamily">"Tahoma"</property>
+                                    <property name="fontStyle">normal</property>
+                                    <property name="color">#FF0000</property>
+                                    <property name="paddingTop">0pt</property>
+                                    <property name="paddingLeft">0pt</property>
+                                    <property name="paddingBottom">2pt</property>
+                                    <property name="paddingRight">0pt</property>
+                                    <expression name="bookmark" type="javascript">'_LOCKED'</expression>
+                                    <text-property name="text" key="ERR_LOCKED">This report design is locked</text-property>
+                                </label>
+                            </cell>
+                        </row>
+                    </grid>
+                </cell>
+            </row>
+        </grid>
+        <grid name="_Missing" id="775">
+            <property name="width">100%</property>
+            <column id="776"/>
+            <row id="777">
+                <cell id="778">
+                    <grid name="NewGrid11" id="779">
+                        <property name="width">100%</property>
+                        <column id="780">
+                            <property name="width">0.5833333333333334in</property>
+                        </column>
+                        <column id="781"/>
+                        <row id="782">
+                            <property name="verticalAlign">middle</property>
+                            <cell id="783">
+                                <image name="NewImage3" id="784">
+                                    <property name="height">32px</property>
+                                    <property name="width">32px</property>
+                                    <property name="source">file</property>
+                                    <expression name="uri" type="constant">myBIRT/images/sign_warning.png</expression>
+                                </image>
+                            </cell>
+                            <cell id="785">
+                                <label name="NewLabel231" id="789">
+                                    <property name="fontFamily">"Tahoma"</property>
+                                    <text-property name="text" key="ERR_NOTFOUND">Error - component not found in library. Remove this item.</text-property>
+                                </label>
+                            </cell>
+                        </row>
+                    </grid>
+                </cell>
+            </row>
+        </grid>
+        <grid name="Blank" id="202">
+            <list-property name="userProperties">
+                <structure>
+                    <property name="name">__Thumbnail</property>
+                    <property name="type">string</property>
+                    <property name="isVisible">true</property>
+                </structure>
+                <structure>
+                    <property name="name">__Description</property>
+                    <property name="type">string</property>
+                    <property name="isVisible">true</property>
+                </structure>
+                <structure>
+                    <property name="name">__DescriptionKey</property>
+                    <property name="type">string</property>
+                </structure>
+            </list-property>
+            <property name="__Thumbnail">eraser2.png</property>
+            <property name="__Description">Empty Slot</property>
+            <property name="__DescriptionKey">CMP_EMPTYSLOT</property>
+            <property name="marginTop">0pt</property>
+            <property name="width">100%</property>
+            <column id="203">
+                <property name="width">9.5cm</property>
+            </column>
+            <row id="204">
+                <property name="textAlign">center</property>
+                <property name="verticalAlign">middle</property>
+                <cell id="205">
+                    <label name="NewLabel1" id="206">
+                        <text-property name="text"></text-property>
+                    </label>
+                </cell>
+            </row>
+        </grid>
+    </components>
+    <page-setup>
+        <simple-master-page name="_ComponentListPage" id="1569">
+            <property name="type">custom</property>
+            <property name="height">100cm</property>
+            <property name="width">15cm</property>
+        </simple-master-page>
+        <simple-master-page name="_Default" id="1120">
+            <property name="comments">Cols=2</property>
+            <property name="type">a4</property>
+            <property name="topMargin">1mm</property>
+            <property name="leftMargin">1mm</property>
+            <property name="bottomMargin">1mm</property>
+            <property name="rightMargin">1mm</property>
+            <property name="backgroundAttachment">fixed</property>
+            <property name="backgroundColor">#C0C0C0</property>
+            <property name="backgroundPositionX">left</property>
+            <property name="backgroundPositionY">top</property>
+            <property name="backgroundRepeat">no-repeat</property>
+            <property name="headerHeight">10mm</property>
+            <property name="footerHeight">0mm</property>
+            <page-header>
+                <label name="NewLabel2" id="2041">
+                    <property name="fontFamily">"Tahoma"</property>
+                    <property name="fontWeight">normal</property>
+                    <property name="color">navy</property>
+                    <property name="textAlign">center</property>
+                    <text-property name="text" key="MSG_CHOOSEMP">Please choose a master page for this section</text-property>
+                </label>
+            </page-header>
+        </simple-master-page>
+    </page-setup>
+</library>

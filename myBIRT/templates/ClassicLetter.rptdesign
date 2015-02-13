@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<report xmlns="http://www.eclipse.org/birt/2005/design" version="3.2.23" id="1">
+    <property name="createdBy">Eclipse BIRT Designer Version 3.7.2.v20121022-1705 Build &lt;3.7.2.v20121022-1705></property>
+    <simple-property-list name="includeResource">
+        <value>myBIRT/ClassicLetter</value>
+    </simple-property-list>
+    <property name="units">in</property>
+    <property name="theme">ClassicLetterComponents.THM_THEME1</property>
+    <property name="iconFile">/templates/blank_report.gif</property>
+    <property name="eventHandlerClass">com.actuate.ps.mybirt.eventhandlers.RenderingReportAdapter</property>
+    <property name="layoutPreference">fixed layout</property>
+    <property name="bidiLayoutOrientation">ltr</property>
+    <list-property name="libraries">
+        <structure>
+            <property name="fileName">myBIRT/ClassicLetterComponents.rptlibrary</property>
+            <property name="namespace">ClassicLetterComponents</property>
+        </structure>
+        <structure>
+            <property name="fileName">myBIRT/myBIRT.rptlibrary</property>
+            <property name="namespace">myBIRT</property>
+        </structure>
+    </list-property>
+    <parameters>
+        <scalar-parameter name="pCustomerId" id="342" extends="ClassicLetterComponents.pCustomerId"/>
+        <scalar-parameter name="__Mode" id="346" extends="myBIRT.__Mode"/>
+        <scalar-parameter name="__StructureChange" id="347" extends="myBIRT.__StructureChange"/>
+        <scalar-parameter name="__SaveAs" id="348" extends="myBIRT.__SaveAs"/>
+    </parameters>
+    <page-setup>
+        <simple-master-page name="__NOTUSED" id="334">
+            <property name="type">a4</property>
+            <property name="topMargin">10mm</property>
+            <property name="leftMargin">10mm</property>
+            <property name="bottomMargin">10mm</property>
+            <property name="rightMargin">10mm</property>
+        </simple-master-page>
+    </page-setup>
+</report>

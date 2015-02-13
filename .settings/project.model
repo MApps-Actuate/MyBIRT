@@ -1,0 +1,338 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.actuate.istudio.analysis.model:Project xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:com.actuate.istudio.analysis.model="http:///com.actuate.istudio.analysis.model.ecore" name="MyBIRT">
+  <files xsi:type="com.actuate.istudio.analysis.model:RptLibrary" name="ClassicLetterComponents.rptlibrary" path="/MyBIRT/Resources/myBIRT/ClassicLetterComponents.rptlibrary">
+    <dataSets name="Customers">
+      <columns name="CUSTOMERNAME"/>
+      <columns name="COUNTRY"/>
+    </dataSets>
+    <dataSets name="CustomerDetails">
+      <columns name="CUSTOMERNUMBER"/>
+      <columns name="CUSTOMERNAME"/>
+      <columns name="CONTACTLASTNAME"/>
+      <columns name="CONTACTFIRSTNAME"/>
+      <columns name="PHONE"/>
+      <columns name="ADDRESSLINE1"/>
+      <columns name="ADDRESSLINE2"/>
+      <columns name="CITY"/>
+      <columns name="STATE"/>
+      <columns name="POSTALCODE"/>
+      <columns name="COUNTRY"/>
+      <columns name="SALESREPEMPLOYEENUMBER"/>
+      <columns name="CREDITLIMIT"/>
+    </dataSets>
+    <dataSets name="SalesRepDetails">
+      <columns name="OFFICECODE"/>
+      <columns name="CITY"/>
+      <columns name="PHONE"/>
+      <columns name="ADDRESSLINE1"/>
+      <columns name="ADDRESSLINE2"/>
+      <columns name="STATE"/>
+      <columns name="COUNTRY"/>
+      <columns name="POSTALCODE"/>
+      <columns name="TERRITORY"/>
+      <columns name="EMPLOYEENUMBER"/>
+      <columns name="LASTNAME"/>
+      <columns name="FIRSTNAME"/>
+      <columns name="EXTENSION"/>
+      <columns name="EMAIL"/>
+      <columns name="OFFICECODE_15"/>
+      <columns name="REPORTSTO"/>
+      <columns name="JOBTITLE"/>
+    </dataSets>
+    <dataSets name="LocalCustomers">
+      <columns name="CUSTOMERNUMBER"/>
+      <columns name="CUSTOMERNAME"/>
+      <columns name="CONTACTLASTNAME"/>
+      <columns name="CONTACTFIRSTNAME"/>
+      <columns name="PHONE"/>
+      <columns name="ADDRESSLINE1"/>
+      <columns name="ADDRESSLINE2"/>
+      <columns name="CITY"/>
+      <columns name="STATE"/>
+      <columns name="POSTALCODE"/>
+      <columns name="COUNTRY"/>
+      <columns name="SALESREPEMPLOYEENUMBER"/>
+      <columns name="CREDITLIMIT"/>
+    </dataSets>
+    <dataSets name="RecentOrders">
+      <columns name="ORDERDATE"/>
+      <columns name="ORDERVALUE"/>
+      <columns name="STATUS"/>
+    </dataSets>
+    <dataSets name="LatestOrderDetails">
+      <columns name="ORDERNUMBER"/>
+      <columns name="PRODUCTCODE"/>
+      <columns name="QUANTITYORDERED"/>
+      <columns name="PRICEEACH"/>
+      <columns name="ORDERLINENUMBER"/>
+      <columns name="ORDERNUMBER_6"/>
+      <columns name="ORDERDATE"/>
+      <columns name="REQUIREDDATE"/>
+      <columns name="SHIPPEDDATE"/>
+      <columns name="STATUS"/>
+      <columns name="COMMENTS"/>
+      <columns name="CUSTOMERNUMBER"/>
+      <columns name="PRODUCTCODE_13"/>
+      <columns name="PRODUCTNAME"/>
+      <columns name="PRODUCTLINE"/>
+      <columns name="PRODUCTSCALE"/>
+      <columns name="PRODUCTVENDOR"/>
+      <columns name="PRODUCTDESCRIPTION"/>
+      <columns name="QUANTITYINSTOCK"/>
+      <columns name="BUYPRICE"/>
+      <columns name="MSRP"/>
+    </dataSets>
+    <dataSets name="RecentPayments">
+      <columns name="CUSTOMERNUMBER"/>
+      <columns name="CHECKNUMBER"/>
+      <columns name="PAYMENTDATE"/>
+      <columns name="AMOUNT"/>
+    </dataSets>
+    <dataSets name="CustomerLookup">
+      <columns name="CUSTOMERNUMBER"/>
+      <columns name="CUSTOMERNAME"/>
+      <columns name="NUMORDERS"/>
+    </dataSets>
+    <dataSets name="ProductLineBreakdown">
+      <columns name="PRODUCTLINE"/>
+      <columns name="LINETOTAL"/>
+      <columns name="ShortName" expression="if (row[&quot;PRODUCTLINE&quot;] == &quot;Classic Cars&quot;)&#xD;&#xA;&#x9;&quot;CC&quot;;&#xD;&#xA;else if (row[&quot;PRODUCTLINE&quot;] == &quot;Motorcycles&quot;)&#xD;&#xA;&#x9;&quot;M&quot;;&#xD;&#xA;else if (row[&quot;PRODUCTLINE&quot;] == &quot;Planes&quot;)&#xD;&#xA;&#x9;&quot;P&quot;;&#xD;&#xA;else if (row[&quot;PRODUCTLINE&quot;] == &quot;Trucks and Buses&quot;)&#xD;&#xA;&#x9;&quot;T&amp;B&quot;;&#xD;&#xA;else if (row[&quot;PRODUCTLINE&quot;] == &quot;Vintage Cars&quot;)&#x9;&#xD;&#xA;&#x9;&quot;VC&quot;;&#xD;&#xA;else&#xD;&#xA;&#x9;row[&quot;PRODUCTLINE&quot;];"/>
+    </dataSets>
+    <dataSets name="FavouriteProducts">
+      <columns name="AMNT"/>
+      <columns name="PRODUCTNAME"/>
+      <columns name="PRODUCTCODE"/>
+      <columns name="PRODUCTLINE"/>
+      <columns name="PRODUCTSCALE"/>
+      <columns name="PRODUCTVENDOR"/>
+      <columns name="QUANTITYINSTOCK"/>
+      <columns name="BUYPRICE"/>
+      <columns name="MSRP"/>
+    </dataSets>
+    <dataSets name="Images">
+      <columns name="PRODUCTLINE"/>
+      <columns name="TEXTDESCRIPTION"/>
+      <columns name="HTMLDESCRIPTION"/>
+      <columns name="IMAGE"/>
+    </dataSets>
+  </files>
+  <files xsi:type="com.actuate.istudio.analysis.model:RptLibrary" name="FundFactsheetComponents.rptlibrary" path="/MyBIRT/Resources/myBIRT/FundFactsheetComponents.rptlibrary">
+    <dataSets name="Performance">
+      <columns name="fonds"/>
+      <columns name="indice"/>
+      <columns name="dt"/>
+    </dataSets>
+    <dataSets name="DonneesStatistiques">
+      <columns name="Libelle"/>
+      <columns name="Fonds"/>
+      <columns name="Indice"/>
+    </dataSets>
+    <dataSets name="RepartitionParVieMoyenne">
+      <columns name="Libelle"/>
+      <columns name="Fonds"/>
+      <columns name="Indice"/>
+    </dataSets>
+    <dataSets name="RepartitionSectorielle">
+      <columns name="Sector"/>
+      <columns name="Frac"/>
+    </dataSets>
+    <dataSets name="RepartitionRating">
+      <columns name="Rating"/>
+      <columns name="Frac"/>
+    </dataSets>
+    <dataSets name="CoverPageInfo">
+      <columns name="ForName"/>
+      <columns name="ForAccount"/>
+      <columns name="ByPractice"/>
+      <columns name="ByName"/>
+      <columns name="ById"/>
+    </dataSets>
+    <dataSets name="PortfolioPerformance">
+      <columns name="Fund Name"/>
+      <columns name="3 Months"/>
+      <columns name="1 Year"/>
+      <columns name="3 Years"/>
+      <columns name="5 Years"/>
+    </dataSets>
+    <dataSets name="PortfolioHoldings">
+      <columns name="Fund Name"/>
+      <columns name="Units"/>
+      <columns name="Unit Value"/>
+      <columns name="Current Value"/>
+    </dataSets>
+  </files>
+  <files xsi:type="com.actuate.istudio.analysis.model:RptLibrary" name="ReflectiveComponents.rptlibrary" path="/MyBIRT/Resources/myBIRT/ReflectiveComponents.rptlibrary">
+    <dataSets name="_ListOfDataSets">
+      <columns name="datasetname"/>
+      <columns name="localname"/>
+    </dataSets>
+    <dataSets name="customers">
+      <columns name="CUSTOMERNUMBER"/>
+      <columns name="CUSTOMERNAME"/>
+      <columns name="CONTACTLASTNAME"/>
+      <columns name="CONTACTFIRSTNAME"/>
+      <columns name="PHONE"/>
+      <columns name="ADDRESSLINE1"/>
+      <columns name="ADDRESSLINE2"/>
+      <columns name="CITY"/>
+      <columns name="STATE"/>
+      <columns name="POSTALCODE"/>
+      <columns name="COUNTRY"/>
+      <columns name="SALESREPEMPLOYEENUMBER"/>
+      <columns name="CREDITLIMIT"/>
+    </dataSets>
+    <dataSets name="orders">
+      <columns name="ORDERNUMBER"/>
+      <columns name="ORDERDATE"/>
+      <columns name="REQUIREDDATE"/>
+      <columns name="SHIPPEDDATE"/>
+      <columns name="STATUS"/>
+      <columns name="COMMENTS"/>
+      <columns name="CUSTOMERNUMBER"/>
+    </dataSets>
+    <dataSets name="payments">
+      <columns name="CUSTOMERNUMBER"/>
+      <columns name="CHECKNUMBER"/>
+      <columns name="PAYMENTDATE"/>
+      <columns name="AMOUNT"/>
+    </dataSets>
+    <dataSets name="_ListOfFields">
+      <columns name="fieldname"/>
+      <columns name="datatype"/>
+    </dataSets>
+    <dataSets name="None selected">
+      <columns name="No data selected"/>
+    </dataSets>
+    <dataSets name="countries">
+      <columns name="CUSTOMERS"/>
+      <columns name="COUNTRY"/>
+    </dataSets>
+  </files>
+  <files xsi:type="com.actuate.istudio.analysis.model:RptLibrary" name="StockComponents.rptlibrary" path="/MyBIRT/Resources/myBIRT/StockComponents.rptlibrary">
+    <dataSets name="YahooFinanceRESTLatest">
+      <columns name="Symbol"/>
+      <columns name="Price"/>
+      <columns name="Time"/>
+      <columns name="Day"/>
+      <columns name="Delta"/>
+      <columns name="Open"/>
+      <columns name="DayMax"/>
+      <columns name="DayMin"/>
+      <columns name="Volume"/>
+      <columns name="CoName"/>
+    </dataSets>
+    <dataSets name="YahooFinanceRESTHistory">
+      <columns name="HistDate"/>
+      <columns name="Open"/>
+      <columns name="High"/>
+      <columns name="Low"/>
+      <columns name="Close"/>
+      <columns name="Volume"/>
+      <columns name="AdjClose"/>
+      <columns name="Symbol"/>
+      <columns name="NormalisedClose"/>
+    </dataSets>
+    <dataSets name="YahooFinanceRESTHistoryComparisonSymbol">
+      <columns name="HistDate"/>
+      <columns name="Open"/>
+      <columns name="High"/>
+      <columns name="Low"/>
+      <columns name="Close"/>
+      <columns name="Volume"/>
+      <columns name="AdjClose"/>
+      <columns name="Symbol"/>
+      <columns name="NormalisedClose"/>
+    </dataSets>
+    <dataSets name="UnionComparisonHistoryDataSet">
+      <columns name="HistDate"/>
+      <columns name="Symbol"/>
+      <columns name="Close"/>
+      <columns name="NormalisedClose"/>
+    </dataSets>
+    <dataSets name="BDOSymbolList">
+      <columns name="Symbol"/>
+      <columns name="Exchange"/>
+      <columns name="Country"/>
+      <columns name="Company"/>
+      <columns name="Description"/>
+    </dataSets>
+    <dataSets name="BDOSymbolDetails">
+      <columns name="Company"/>
+      <columns name="Symbol"/>
+      <columns name="Exchange"/>
+      <columns name="Country"/>
+      <columns name="Description"/>
+    </dataSets>
+  </files>
+  <files xsi:type="com.actuate.istudio.analysis.model:Data" name="StockData.data" path="/MyBIRT/Resources/myBIRT/StockData.data"/>
+  <files xsi:type="com.actuate.istudio.analysis.model:DataDesign" name="StockData.datadesign" path="/MyBIRT/Resources/myBIRT/StockData.datadesign">
+    <dataSets name="Symbol List">
+      <columns name="Company"/>
+      <columns name="Symbol"/>
+      <columns name="Exchange"/>
+      <columns name="Country"/>
+      <columns name="Description" expression="row[&quot;Company&quot;] + &quot; (&quot; + row[&quot;Symbol&quot;] +&quot;)&quot;"/>
+    </dataSets>
+  </files>
+  <files xsi:type="com.actuate.istudio.analysis.model:RptLibrary" name="myBIRT.rptlibrary" path="/MyBIRT/Resources/myBIRT/myBIRT.rptlibrary">
+    <dataSets name="ListDesignFiles">
+      <columns name="filename"/>
+      <columns name="extension"/>
+      <columns name="filepath"/>
+      <columns name="counter"/>
+      <columns name="version"/>
+      <columns name="localname"/>
+    </dataSets>
+  </files>
+  <files xsi:type="com.actuate.istudio.analysis.model:RptDesign" name="Test Report.rptdesign" path="/MyBIRT/myBIRT/draft/Test Report.rptdesign"/>
+  <files xsi:type="com.actuate.istudio.analysis.model:RptDesign" name="Test Report.rptdesign" path="/MyBIRT/myBIRT/home/Test Report.rptdesign"/>
+  <files xsi:type="com.actuate.istudio.analysis.model:RptDesign" name="ClassicLetter.rptdesign" path="/MyBIRT/myBIRT/templates/ClassicLetter.rptdesign"/>
+  <files xsi:type="com.actuate.istudio.analysis.model:RptDesign" name="FundFactsheet.rptdesign" path="/MyBIRT/myBIRT/templates/FundFactsheet.rptdesign"/>
+  <files xsi:type="com.actuate.istudio.analysis.model:RptDesign" name="Reflective.rptdesign" path="/MyBIRT/myBIRT/templates/Reflective.rptdesign"/>
+  <files xsi:type="com.actuate.istudio.analysis.model:RptDesign" name="StockReport.rptdesign" path="/MyBIRT/myBIRT/templates/StockReport.rptdesign"/>
+  <files xsi:type="com.actuate.istudio.analysis.model:RptDesign" name="_ClassicLetter.rptdesign" path="/MyBIRT/myBIRT/templates/_ClassicLetter.rptdesign"/>
+  <files xsi:type="com.actuate.istudio.analysis.model:RptDesign" name="_FundFactsheet.rptdesign" path="/MyBIRT/myBIRT/templates/_FundFactsheet.rptdesign"/>
+  <files xsi:type="com.actuate.istudio.analysis.model:RptDesign" name="_Reflective.rptdesign" path="/MyBIRT/myBIRT/templates/_Reflective.rptdesign">
+    <dataSets name="_ListOfDataSets">
+      <columns name="datasetname"/>
+      <columns name="localname"/>
+    </dataSets>
+    <dataSets name="_ListOfFields">
+      <columns name="fieldname"/>
+      <columns name="datatype"/>
+    </dataSets>
+    <dataSets name="_ListOfFieldsForChart">
+      <columns name="fieldname"/>
+      <columns name="datatype"/>
+    </dataSets>
+  </files>
+  <files xsi:type="com.actuate.istudio.analysis.model:RptDesign" name="_StockReport.rptdesign" path="/MyBIRT/myBIRT/templates/_StockReport.rptdesign">
+    <dataSets name="BDOSymbolList">
+      <columns name="Symbol"/>
+      <columns name="Exchange"/>
+      <columns name="Country"/>
+      <columns name="Company"/>
+      <columns name="Description"/>
+    </dataSets>
+  </files>
+  <files xsi:type="com.actuate.istudio.analysis.model:RptDesign" name="choosemode.rptdesign" path="/MyBIRT/myBIRT/uireports/choosemode.rptdesign"/>
+  <files xsi:type="com.actuate.istudio.analysis.model:RptDesign" name="deletedesign.rptdesign" path="/MyBIRT/myBIRT/uireports/deletedesign.rptdesign">
+    <dataSets name="ListDesignFiles"/>
+  </files>
+  <files xsi:type="com.actuate.istudio.analysis.model:RptDesign" name="newdesign.rptdesign" path="/MyBIRT/myBIRT/uireports/newdesign.rptdesign">
+    <dataSets name="ListDesignFiles"/>
+  </files>
+  <files xsi:type="com.actuate.istudio.analysis.model:RptDesign" name="opendesign.rptdesign" path="/MyBIRT/myBIRT/uireports/opendesign.rptdesign">
+    <dataSets name="ListDesignFiles_HomeFolder"/>
+    <dataSets name="ListDesignFiles_DraftFolder"/>
+    <dataSets name="DraftAndSavedDesigns">
+      <columns name="filename"/>
+      <columns name="extension"/>
+      <columns name="filepath"/>
+      <columns name="counter"/>
+      <columns name="version"/>
+      <columns name="Description" expression="var fn = row[&quot;filename&quot;];&#xD;&#xA;&#xD;&#xA;if (row[&quot;filepath&quot;].indexOf(&quot;/draft&quot;) > -1)&#xD;&#xA;&#x9;fn += &quot; (Draft copy)&quot;;&#xD;&#xA;else&#xD;&#xA;&#x9;fn += &quot; (Version &quot; + row[&quot;version&quot;] + &quot;)&quot;;&#xD;&#xA;&#xD;&#xA;fn;"/>
+    </dataSets>
+  </files>
+  <files xsi:type="com.actuate.istudio.analysis.model:RptDesign" name="savemode.rptdesign" path="/MyBIRT/myBIRT/uireports/savemode.rptdesign"/>
+</com.actuate.istudio.analysis.model:Project>

@@ -1,0 +1,1949 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<report xmlns="http://www.eclipse.org/birt/2005/design" version="3.2.23" id="1">
+    <property name="createdBy">Eclipse BIRT Designer Version 3.7.2.v20121022-1705 Build &lt;3.7.2.v20121022-1705></property>
+    <list-property name="userProperties">
+        <structure>
+            <property name="name">__Structure</property>
+            <property name="type">string</property>
+        </structure>
+    </list-property>
+    <property name="__Structure">&lt;?xml version="1.0" encoding="UTF-8" standalone="yes"?>&lt;layout xmlns="http://com.actuate.ps">&lt;template>FundFactsheet&lt;/template>&lt;status>Unlocked&lt;/status>&lt;theme>THM_THEME1&lt;/theme>&lt;sections>&lt;section>&lt;sequence>1&lt;/sequence>&lt;masterpage>_Default&lt;/masterpage>&lt;component>&lt;row>1&lt;/row>&lt;column>1&lt;/column>&lt;elementName>Title&lt;/elementName>&lt;width>0&lt;/width>&lt;height>0&lt;/height>&lt;/component>&lt;component>&lt;row>2&lt;/row>&lt;column>1&lt;/column>&lt;elementName>DegreeOfRisk&lt;/elementName>&lt;width>0&lt;/width>&lt;height>0&lt;/height>&lt;/component>&lt;component>&lt;row>2&lt;/row>&lt;column>2&lt;/column>&lt;elementName>Disclaimer&lt;/elementName>&lt;width>0&lt;/width>&lt;height>0&lt;/height>&lt;/component>&lt;component>&lt;row>3&lt;/row>&lt;column>1&lt;/column>&lt;elementName>Statistics&lt;/elementName>&lt;width>0&lt;/width>&lt;height>0&lt;/height>&lt;/component>&lt;component>&lt;row>3&lt;/row>&lt;column>2&lt;/column>&lt;elementName>AllocationByAge&lt;/elementName>&lt;width>0&lt;/width>&lt;height>0&lt;/height>&lt;/component>&lt;component>&lt;row>4&lt;/row>&lt;column>1&lt;/column>&lt;elementName>AllocationBySector&lt;/elementName>&lt;width>0&lt;/width>&lt;height>0&lt;/height>&lt;/component>&lt;component>&lt;row>5&lt;/row>&lt;column>1&lt;/column>&lt;elementName>PortfolioPerformance&lt;/elementName>&lt;width>0&lt;/width>&lt;height>0&lt;/height>&lt;/component>&lt;/section>&lt;/sections>&lt;/layout></property>
+    <simple-property-list name="includeResource">
+        <value>myBIRT/FundFactsheet</value>
+    </simple-property-list>
+    <property name="units">in</property>
+    <property name="theme">FundFactsheet.THM_THEME1</property>
+    <property name="iconFile">/templates/blank_report.gif</property>
+    <property name="eventHandlerClass">com.actuate.ps.mybirt.eventhandlers.RenderingReportAdapter</property>
+    <property name="layoutPreference">fixed layout</property>
+    <property name="bidiLayoutOrientation">ltr</property>
+    <list-property name="libraries">
+        <structure>
+            <property name="fileName">myBIRT/myBIRT.rptlibrary</property>
+            <property name="namespace">myBIRT</property>
+        </structure>
+        <structure>
+            <property name="fileName">myBIRT/FundFactsheetComponents.rptlibrary</property>
+            <property name="namespace">FundFactsheet</property>
+        </structure>
+    </list-property>
+    <parameters>
+        <scalar-parameter name="Fund ID" id="349" extends="FundFactsheet.Fund ID"/>
+        <scalar-parameter name="__SaveAs" id="3411" extends="myBIRT.__SaveAs"/>
+        <scalar-parameter name="__StructureChange" id="3412" extends="myBIRT.__StructureChange"/>
+        <scalar-parameter name="__Mode" id="3413" extends="myBIRT.__Mode"/>
+    </parameters>
+    <page-setup>
+        <simple-master-page name="__NOTUSED" id="334">
+            <property name="type">a4</property>
+            <property name="topMargin">10mm</property>
+            <property name="leftMargin">10mm</property>
+            <property name="bottomMargin">10mm</property>
+            <property name="rightMargin">10mm</property>
+        </simple-master-page>
+        <simple-master-page name="SMP_FACTSHEET" id="3">
+            <property name="comments">Cols=3</property>
+            <property name="type">a4</property>
+            <property name="topMargin">5mm</property>
+            <property name="leftMargin">5mm</property>
+            <property name="bottomMargin">5mm</property>
+            <property name="rightMargin">5mm</property>
+            <property name="backgroundColor">white</property>
+            <property name="headerHeight">1cm</property>
+            <property name="footerHeight">1cm</property>
+            <page-header>
+                <label id="9781">
+                    <property name="display">none</property>
+                    <expression name="bookmark">'section_lbl'</expression>
+                    <text-property name="text">{"type":"section","masterpage":"SMP_FACTSHEET", "template":"FundFactsheet", "columns":3, "theme":"THM_THEME1"}</text-property>
+                </label>
+            </page-header>
+            <page-footer>
+                <grid name="NewGrid3" id="2354">
+                    <property name="style">TextBlock</property>
+                    <column id="2355"/>
+                    <row id="2356">
+                        <cell id="2357">
+                            <property name="textAlign">center</property>
+                            <grid name="NewGrid4" id="2371">
+                                <column id="2372"/>
+                                <column id="2374"/>
+                                <row id="2375">
+                                    <cell id="2376">
+                                        <property name="borderRightColor">#000000</property>
+                                        <property name="borderRightStyle">solid</property>
+                                        <property name="borderRightWidth">1px</property>
+                                        <auto-text name="NewAutoText" id="2377">
+                                            <property name="paddingRight">5pt</property>
+                                            <property name="textAlign">right</property>
+                                            <property name="type">page-number</property>
+                                        </auto-text>
+                                    </cell>
+                                    <cell id="2380">
+                                        <auto-text name="NewAutoText1" id="2381">
+                                            <property name="paddingLeft">5pt</property>
+                                            <property name="textAlign">left</property>
+                                            <property name="type">total-page</property>
+                                        </auto-text>
+                                    </cell>
+                                </row>
+                            </grid>
+                        </cell>
+                    </row>
+                </grid>
+            </page-footer>
+        </simple-master-page>
+    </page-setup>
+    <body>
+        <grid id="9782">
+            <property name="masterPage">SMP_FACTSHEET</property>
+            <property name="pageBreakAfter">always</property>
+            <property name="width">200mm</property>
+            <expression name="bookmark">'_Grid1_SMP_FACTSHEET'</expression>
+            <column id="9783">
+                <property name="width">66.667mm</property>
+            </column>
+            <column id="9784">
+                <property name="width">66.667mm</property>
+            </column>
+            <column id="9785">
+                <property name="width">66.667mm</property>
+            </column>
+            <row id="9786">
+                <cell id="9787">
+                    <property name="colSpan">3</property>
+                    <property name="paddingTop">0mm</property>
+                    <property name="paddingLeft">0mm</property>
+                    <property name="paddingBottom">0mm</property>
+                    <property name="paddingRight">0mm</property>
+                    <property name="textAlign">justify</property>
+                    <property name="verticalAlign">top</property>
+                    <label id="9800">
+                        <property name="display">none</property>
+                        <expression name="bookmark">'Slot_1_1_1_OParms'</expression>
+                        <text-property name="text">{"type":"component","compname":"Title","slotid":"Slot_1_1_1_O", "parameters":{},"alignment":"null","width":3,"height":1}</text-property>
+                    </label>
+                    <grid name="Slot_1_1_1_O" id="2314">
+                        <list-property name="userProperties">
+                            <structure>
+                                <property name="name">__Description</property>
+                                <property name="type">string</property>
+                            </structure>
+                            <structure>
+                                <property name="name">__Thumbnail</property>
+                                <property name="type">string</property>
+                            </structure>
+                            <structure>
+                                <property name="name">__Width</property>
+                                <property name="type">integer</property>
+                            </structure>
+                            <structure>
+                                <property name="name">__DescriptionKey</property>
+                                <property name="type">string</property>
+                            </structure>
+                        </list-property>
+                        <property name="__Description">Titre</property>
+                        <property name="__Thumbnail">painting.png</property>
+                        <property name="__Width">3</property>
+                        <property name="__DescriptionKey">CMP_TITLE</property>
+                        <property name="pageBreakInside">avoid</property>
+                        <property name="width">200.001mm</property>
+                        <expression name="bookmark">'Slot_1_1_1_O'</expression>
+                        <column id="2315">
+                            <property name="width">60%</property>
+                        </column>
+                        <column id="2327"/>
+                        <row id="2322">
+                            <property name="height">23px</property>
+                            <list-property name="visibility">
+                                <structure>
+                                    <property name="format">all</property>
+                                    <expression name="valueExpr" type="javascript">reportContext.getGlobalVariable("_themename") != "THM_THEME1"</expression>
+                                </structure>
+                            </list-property>
+                            <cell id="2323">
+                                <property name="backgroundImageType">url</property>
+                                <property name="backgroundRepeat">no-repeat</property>
+                                <property name="paddingTop">0pt</property>
+                                <property name="paddingLeft">0pt</property>
+                                <property name="paddingBottom">0pt</property>
+                                <property name="paddingRight">0pt</property>
+                            </cell>
+                            <cell id="2324">
+                                <property name="backgroundImageType">url</property>
+                                <property name="backgroundRepeat">no-repeat</property>
+                                <property name="paddingTop">0pt</property>
+                                <property name="paddingLeft">0pt</property>
+                                <property name="paddingBottom">0pt</property>
+                                <property name="paddingRight">0pt</property>
+                                <property name="textAlign">right</property>
+                                <image name="el4" id="2328">
+                                    <property name="height">23px</property>
+                                    <property name="width">161px</property>
+                                    <property name="source">embed</property>
+                                    <property name="imageName">FundFactsheet.factsheetBanner1.png</property>
+                                </image>
+                            </cell>
+                        </row>
+                        <row id="2316">
+                            <cell id="2317">
+                                <property name="colSpan">2</property>
+                                <property name="rowSpan">1</property>
+                                <property name="backgroundImageType">url</property>
+                                <property name="backgroundRepeat">no-repeat</property>
+                                <property name="paddingTop">0pt</property>
+                                <property name="paddingLeft">0pt</property>
+                                <property name="paddingBottom">0pt</property>
+                                <property name="paddingRight">0pt</property>
+                                <grid name="el7" id="2429">
+                                    <column id="2430"/>
+                                    <column id="2431"/>
+                                    <row id="2432">
+                                        <cell id="2433">
+                                            <property name="style">mainTitleBlock1</property>
+                                            <label name="el5" id="2435">
+                                                <text-property name="text" key="LBL_TITLE">Fonds marchés émergents</text-property>
+                                            </label>
+                                        </cell>
+                                        <cell id="2434">
+                                            <property name="style">mainTitleBlock1</property>
+                                            <text name="el6" id="2413">
+                                                <property name="contentType">html</property>
+                                                <text-property name="content"><![CDATA[<VALUE-OF>params["Fund ID"].value</VALUE-OF>]]></text-property>
+                                            </text>
+                                        </cell>
+                                    </row>
+                                </grid>
+                            </cell>
+                        </row>
+                        <row id="2331">
+                            <property name="height">13px</property>
+                            <list-property name="visibility">
+                                <structure>
+                                    <property name="format">all</property>
+                                    <expression name="valueExpr" type="javascript">reportContext.getGlobalVariable("_themename") != "THM_THEME1"</expression>
+                                </structure>
+                            </list-property>
+                            <cell id="2332">
+                                <property name="backgroundColor">silver</property>
+                                <property name="paddingTop">0pt</property>
+                                <property name="paddingLeft">0pt</property>
+                                <property name="paddingBottom">0pt</property>
+                                <property name="paddingRight">0pt</property>
+                            </cell>
+                            <cell id="2333">
+                                <property name="backgroundColor">#37468F</property>
+                                <property name="paddingTop">0pt</property>
+                                <property name="paddingLeft">0pt</property>
+                                <property name="paddingBottom">0pt</property>
+                                <property name="paddingRight">0pt</property>
+                                <property name="verticalAlign">top</property>
+                                <image name="el8" id="2334">
+                                    <property name="height">13px</property>
+                                    <property name="width">25px</property>
+                                    <property name="source">embed</property>
+                                    <property name="imageName">FundFactsheet.factsheetBanner2.png</property>
+                                </image>
+                            </cell>
+                        </row>
+                        <row id="2319">
+                            <cell id="2320">
+                                <property name="style">mainTitleBlock2</property>
+                                <grid name="el11" id="2336">
+                                    <property name="width">12cm</property>
+                                    <column id="2337">
+                                        <property name="width">1.3958333333333333in</property>
+                                    </column>
+                                    <column id="2338">
+                                        <property name="width">3.3229166666666665in</property>
+                                    </column>
+                                    <row id="2339">
+                                        <cell id="2340">
+                                            <property name="style">mainTitleBlock2</property>
+                                            <label name="el9" id="2335">
+                                                <text-property name="text">Morningstar: </text-property>
+                                            </label>
+                                        </cell>
+                                        <cell id="2341">
+                                            <property name="style">mainTitleBlock2</property>
+                                            <label name="el10" id="2342">
+                                                <property name="fontFamily">"Wingdings"</property>
+                                                <property name="fontSize">14pt</property>
+                                                <method name="onCreate"><![CDATA[if (params["Fund ID"].value == 1)
+	this.text = "«««";
+else
+	this.text = "««««";]]></method>
+                                                <text-property name="text">««««</text-property>
+                                            </label>
+                                        </cell>
+                                    </row>
+                                </grid>
+                            </cell>
+                            <cell id="2326">
+                                <property name="style">mainTitleBlock2</property>
+                            </cell>
+                        </row>
+                    </grid>
+                    <label id="9801">
+                        <property name="display">none</property>
+                        <expression name="bookmark">'Slot_1_1_1_OAfterParms'</expression>
+                        <text-property name="text">{"type":"component","compname":"Title","slotid":"Slot_1_1_1_O", "parameters":{},"alignment":"null","width":3,"height":1}</text-property>
+                    </label>
+                </cell>
+            </row>
+            <row id="9802">
+                <cell id="9803">
+                    <property name="paddingTop">0mm</property>
+                    <property name="paddingLeft">0mm</property>
+                    <property name="paddingBottom">0mm</property>
+                    <property name="paddingRight">0mm</property>
+                    <property name="textAlign">justify</property>
+                    <property name="verticalAlign">top</property>
+                    <label id="9816">
+                        <property name="display">none</property>
+                        <expression name="bookmark">'Slot_1_2_1_OParms'</expression>
+                        <text-property name="text">{"type":"component","compname":"DegreeOfRisk","slotid":"Slot_1_2_1_O", "parameters":{},"alignment":"null","width":1,"height":1}</text-property>
+                    </label>
+                    <grid name="Slot_1_2_1_O" id="1921">
+                        <list-property name="userProperties">
+                            <structure>
+                                <property name="name">__Description</property>
+                                <property name="type">string</property>
+                            </structure>
+                            <structure>
+                                <property name="name">__Thumbnail</property>
+                                <property name="type">string</property>
+                            </structure>
+                            <structure>
+                                <property name="name">__Width</property>
+                                <property name="type">integer</property>
+                            </structure>
+                            <structure>
+                                <property name="name">__DescriptionKey</property>
+                                <property name="type">string</property>
+                            </structure>
+                        </list-property>
+                        <property name="__Description">Degré de risque</property>
+                        <property name="__Thumbnail">text.png</property>
+                        <property name="__Width">1</property>
+                        <property name="__DescriptionKey">CMP_DEGRISK</property>
+                        <property name="pageBreakInside">avoid</property>
+                        <expression name="bookmark">'Slot_1_2_1_O'</expression>
+                        <column id="1922"/>
+                        <row id="1923">
+                            <cell id="1924">
+                                <property name="style">TitleCell</property>
+                                <label name="el12" id="1925">
+                                    <property name="style">Title</property>
+                                    <text-property name="text" key="LBL_DEGRISK">Degré de risque</text-property>
+                                </label>
+                            </cell>
+                        </row>
+                        <row id="1999">
+                            <cell id="2000">
+                                <grid name="el20" id="2002">
+                                    <column id="2003">
+                                        <property name="whiteSpace">nowrap</property>
+                                        <property name="width">1.53125in</property>
+                                    </column>
+                                    <column id="2004">
+                                        <property name="textAlign">center</property>
+                                    </column>
+                                    <column id="2005">
+                                        <property name="textAlign">center</property>
+                                    </column>
+                                    <column id="2006">
+                                        <property name="textAlign">center</property>
+                                    </column>
+                                    <column id="2007">
+                                        <property name="textAlign">center</property>
+                                    </column>
+                                    <column id="2008">
+                                        <property name="textAlign">center</property>
+                                    </column>
+                                    <column id="2009">
+                                        <property name="textAlign">center</property>
+                                    </column>
+                                    <row id="2010">
+                                        <cell id="2011">
+                                            <label name="el13" id="2018">
+                                                <property name="style">TextBlock</property>
+                                                <text-property name="text" key="LBL_RISKCLASS">Classe de risque :</text-property>
+                                            </label>
+                                        </cell>
+                                        <cell id="2012">
+                                            <label name="el14" id="2019">
+                                                <property name="borderBottomColor">#FFFFFF</property>
+                                                <property name="borderBottomStyle">solid</property>
+                                                <property name="borderBottomWidth">medium</property>
+                                                <property name="borderLeftColor">#FFFFFF</property>
+                                                <property name="borderLeftStyle">solid</property>
+                                                <property name="borderLeftWidth">medium</property>
+                                                <property name="borderRightColor">#FFFFFF</property>
+                                                <property name="borderRightStyle">solid</property>
+                                                <property name="borderRightWidth">medium</property>
+                                                <property name="borderTopColor">#FFFFFF</property>
+                                                <property name="borderTopStyle">solid</property>
+                                                <property name="borderTopWidth">medium</property>
+                                                <text-property name="text">0</text-property>
+                                            </label>
+                                        </cell>
+                                        <cell id="2013">
+                                            <label name="el15" id="2020">
+                                                <property name="borderBottomColor">#FFFFFF</property>
+                                                <property name="borderBottomStyle">solid</property>
+                                                <property name="borderBottomWidth">medium</property>
+                                                <property name="borderLeftColor">#FFFFFF</property>
+                                                <property name="borderLeftStyle">solid</property>
+                                                <property name="borderLeftWidth">medium</property>
+                                                <property name="borderRightColor">#FFFFFF</property>
+                                                <property name="borderRightStyle">solid</property>
+                                                <property name="borderRightWidth">medium</property>
+                                                <property name="borderTopColor">#FFFFFF</property>
+                                                <property name="borderTopStyle">solid</property>
+                                                <property name="borderTopWidth">medium</property>
+                                                <text-property name="text">1</text-property>
+                                            </label>
+                                        </cell>
+                                        <cell id="2014">
+                                            <label name="el16" id="2021">
+                                                <property name="borderBottomColor">#FFFFFF</property>
+                                                <property name="borderBottomStyle">solid</property>
+                                                <property name="borderBottomWidth">medium</property>
+                                                <property name="borderLeftColor">#FFFFFF</property>
+                                                <property name="borderLeftStyle">solid</property>
+                                                <property name="borderLeftWidth">medium</property>
+                                                <property name="borderRightColor">#FFFFFF</property>
+                                                <property name="borderRightStyle">solid</property>
+                                                <property name="borderRightWidth">medium</property>
+                                                <property name="borderTopColor">#FFFFFF</property>
+                                                <property name="borderTopStyle">solid</property>
+                                                <property name="borderTopWidth">medium</property>
+                                                <text-property name="text">2</text-property>
+                                            </label>
+                                        </cell>
+                                        <cell id="2015">
+                                            <property name="borderBottomWidth">medium</property>
+                                            <property name="borderLeftColor">#000000</property>
+                                            <property name="borderLeftWidth">medium</property>
+                                            <property name="borderRightColor">#000000</property>
+                                            <property name="borderRightWidth">medium</property>
+                                            <property name="borderTopColor">#000000</property>
+                                            <property name="borderTopWidth">medium</property>
+                                            <label name="el17" id="2022">
+                                                <property name="style">borderHighlight</property>
+                                                <text-property name="text">3</text-property>
+                                            </label>
+                                        </cell>
+                                        <cell id="2016">
+                                            <label name="el18" id="2023">
+                                                <property name="borderBottomColor">#FFFFFF</property>
+                                                <property name="borderBottomStyle">solid</property>
+                                                <property name="borderBottomWidth">medium</property>
+                                                <property name="borderLeftColor">#FFFFFF</property>
+                                                <property name="borderLeftStyle">solid</property>
+                                                <property name="borderLeftWidth">medium</property>
+                                                <property name="borderRightColor">#FFFFFF</property>
+                                                <property name="borderRightStyle">solid</property>
+                                                <property name="borderRightWidth">medium</property>
+                                                <property name="borderTopColor">#FFFFFF</property>
+                                                <property name="borderTopStyle">solid</property>
+                                                <property name="borderTopWidth">medium</property>
+                                                <text-property name="text">4</text-property>
+                                            </label>
+                                        </cell>
+                                        <cell id="2017">
+                                            <label name="el19" id="2024">
+                                                <property name="borderBottomColor">#FFFFFF</property>
+                                                <property name="borderBottomStyle">solid</property>
+                                                <property name="borderBottomWidth">medium</property>
+                                                <property name="borderLeftColor">#FFFFFF</property>
+                                                <property name="borderLeftStyle">solid</property>
+                                                <property name="borderLeftWidth">medium</property>
+                                                <property name="borderRightColor">#FFFFFF</property>
+                                                <property name="borderRightStyle">solid</property>
+                                                <property name="borderRightWidth">medium</property>
+                                                <property name="borderTopColor">#FFFFFF</property>
+                                                <property name="borderTopStyle">solid</property>
+                                                <property name="borderTopWidth">medium</property>
+                                                <text-property name="text">5</text-property>
+                                            </label>
+                                        </cell>
+                                    </row>
+                                </grid>
+                            </cell>
+                        </row>
+                        <row id="1929">
+                            <cell id="1930">
+                                <label name="el21" id="1931">
+                                    <property name="style">TextBlock</property>
+                                    <text-property name="text" key="LBL_RISKDESC">La classe de risque est indicative et est calculée sur une échelle allant de 0 (risque le plus faible) à 6 (risque le plus élevé). Elle prend notamment en compte la volatilité du fonds, la fréquence de valorisation, l'effet levier éventuellement autorisé et les spécificités du processus de gestion.</text-property>
+                                </label>
+                            </cell>
+                        </row>
+                    </grid>
+                    <label id="9817">
+                        <property name="display">none</property>
+                        <expression name="bookmark">'Slot_1_2_1_OAfterParms'</expression>
+                        <text-property name="text">{"type":"component","compname":"DegreeOfRisk","slotid":"Slot_1_2_1_O", "parameters":{},"alignment":"null","width":1,"height":1}</text-property>
+                    </label>
+                </cell>
+                <cell id="9804">
+                    <property name="colSpan">2</property>
+                    <property name="paddingTop">0mm</property>
+                    <property name="paddingLeft">0mm</property>
+                    <property name="paddingBottom">0mm</property>
+                    <property name="paddingRight">0mm</property>
+                    <property name="textAlign">justify</property>
+                    <property name="verticalAlign">top</property>
+                    <label id="9818">
+                        <property name="display">none</property>
+                        <expression name="bookmark">'Slot_1_2_2_OParms'</expression>
+                        <text-property name="text">{"type":"component","compname":"Disclaimer","slotid":"Slot_1_2_2_O", "parameters":{},"alignment":"null","width":2,"height":1}</text-property>
+                    </label>
+                    <grid name="Slot_1_2_2_O" id="2241">
+                        <list-property name="userProperties">
+                            <structure>
+                                <property name="name">__Description</property>
+                                <property name="type">string</property>
+                            </structure>
+                            <structure>
+                                <property name="name">__Thumbnail</property>
+                                <property name="type">string</property>
+                            </structure>
+                            <structure>
+                                <property name="name">__Width</property>
+                                <property name="type">integer</property>
+                            </structure>
+                            <structure>
+                                <property name="name">__DescriptionKey</property>
+                                <property name="type">string</property>
+                            </structure>
+                        </list-property>
+                        <property name="__Description">Désistement</property>
+                        <property name="__Thumbnail">text.png</property>
+                        <property name="__Width">2</property>
+                        <property name="__DescriptionKey">CMP_DISCLAIMER</property>
+                        <property name="pageBreakInside">avoid</property>
+                        <expression name="bookmark">'Slot_1_2_2_O'</expression>
+                        <column id="2242"/>
+                        <row id="2243">
+                            <cell id="2244">
+                                <property name="style">TitleCell</property>
+                                <label name="el25" id="2245">
+                                    <property name="style">Title</property>
+                                    <text-property name="text" key="LBL_DISCLAIMER">Uniquement pour les investisseurs qualifiés</text-property>
+                                </label>
+                            </cell>
+                        </row>
+                        <row id="2271">
+                            <cell id="2272">
+                                <label name="el26" id="2273">
+                                    <property name="style">TextBlock</property>
+                                    <text-property name="text" key="LBL_DISCTEST1">Au cas où la performance est exprimée dans une autre devise que celle en vigueur dans le pays de résidence de l’investisseur, les returns pourraient augmenter ou diminuer en raison des fluctuations de la devise.</text-property>
+                                </label>
+                                <label name="el27" id="2415">
+                                    <property name="style">TextBlock</property>
+                                    <text-property name="text" key="LBL_DISCTEST2">L’investisseur est invité à consulter le prospectus relatif au fonds qui détaille les risques inhérents. Le prospectus, le prospectus simplifié, le dernier rapport annuel et d’autres informations relatives au fonds sont disponibles sur le site www.abcdef.com.&#13;
+Un glossaire s’y trouve également.</text-property>
+                                </label>
+                                <label name="el28" id="2417">
+                                    <property name="style">TextBlock</property>
+                                    <text-property name="text" key="LBL_DISCTEST3">L’investisseur est invité à consulter le prospectus relatif au fonds qui détaille les risques inhérents. Le prospectus, le prospectus simplifié, le dernier rapport annuel et d’autres informations relatives au fonds sont disponibles sur le site www.abcdef.com.&#13;
+Un glossaire s’y trouve également.</text-property>
+                                </label>
+                            </cell>
+                        </row>
+                    </grid>
+                    <label id="9819">
+                        <property name="display">none</property>
+                        <expression name="bookmark">'Slot_1_2_2_OAfterParms'</expression>
+                        <text-property name="text">{"type":"component","compname":"Disclaimer","slotid":"Slot_1_2_2_O", "parameters":{},"alignment":"null","width":2,"height":1}</text-property>
+                    </label>
+                </cell>
+            </row>
+            <row id="9820">
+                <cell id="9821">
+                    <property name="paddingTop">0mm</property>
+                    <property name="paddingLeft">0mm</property>
+                    <property name="paddingBottom">0mm</property>
+                    <property name="paddingRight">0mm</property>
+                    <property name="textAlign">justify</property>
+                    <property name="verticalAlign">top</property>
+                    <label id="9834">
+                        <property name="display">none</property>
+                        <expression name="bookmark">'Slot_1_3_1_OParms'</expression>
+                        <text-property name="text">{"type":"component","compname":"Statistics","slotid":"Slot_1_3_1_O", "parameters":{},"alignment":"null","width":1,"height":1}</text-property>
+                    </label>
+                    <grid name="Slot_1_3_1_O" id="2044">
+                        <list-property name="userProperties">
+                            <structure>
+                                <property name="name">__Description</property>
+                                <property name="type">string</property>
+                            </structure>
+                            <structure>
+                                <property name="name">__Thumbnail</property>
+                                <property name="type">string</property>
+                            </structure>
+                            <structure>
+                                <property name="name">__Width</property>
+                                <property name="type">integer</property>
+                            </structure>
+                            <structure>
+                                <property name="name">__DescriptionKey</property>
+                                <property name="type">string</property>
+                            </structure>
+                        </list-property>
+                        <property name="__Description">Données statistiques</property>
+                        <property name="__Thumbnail">table.png</property>
+                        <property name="__Width">1</property>
+                        <property name="__DescriptionKey">CMP_STATISTICS</property>
+                        <property name="pageBreakInside">avoid</property>
+                        <expression name="bookmark">'Slot_1_3_1_O'</expression>
+                        <column id="2045"/>
+                        <row id="2048">
+                            <cell id="2049">
+                                <property name="style">TitleCell</property>
+                                <label name="el29" id="2050">
+                                    <property name="style">Title</property>
+                                    <text-property name="text" key="LBL_STATISTICS">Données statistiques*</text-property>
+                                </label>
+                            </cell>
+                        </row>
+                        <row id="2053">
+                            <cell id="2054">
+                                <grid name="el37" id="2085">
+                                    <column id="2086">
+                                        <property name="width">35mm</property>
+                                    </column>
+                                    <column id="2087">
+                                        <property name="textAlign">center</property>
+                                    </column>
+                                    <column id="2088">
+                                        <property name="textAlign">center</property>
+                                    </column>
+                                    <row id="2113">
+                                        <cell id="2114">
+                                            <property name="colSpan">3</property>
+                                            <property name="rowSpan">1</property>
+                                            <table name="el35" id="2135">
+                                                <property name="dataSet">FundFactsheet.DonneesStatistiques</property>
+                                                <list-property name="boundDataColumns">
+                                                    <structure>
+                                                        <property name="name">Libelle</property>
+                                                        <text-property name="displayName">Libelle</text-property>
+                                                        <expression name="expression" type="javascript">dataSetRow["Libelle"]</expression>
+                                                        <property name="dataType">string</property>
+                                                    </structure>
+                                                    <structure>
+                                                        <property name="name">Fonds</property>
+                                                        <text-property name="displayName">Fonds</text-property>
+                                                        <expression name="expression" type="javascript">dataSetRow["Fonds"]</expression>
+                                                        <property name="dataType">float</property>
+                                                    </structure>
+                                                    <structure>
+                                                        <property name="name">Indice</property>
+                                                        <text-property name="displayName">Indice</text-property>
+                                                        <expression name="expression" type="javascript">dataSetRow["Indice"]</expression>
+                                                        <property name="dataType">float</property>
+                                                    </structure>
+                                                </list-property>
+                                                <column id="2154">
+                                                    <property name="width">35mm</property>
+                                                </column>
+                                                <column id="2155">
+                                                    <property name="textAlign">center</property>
+                                                </column>
+                                                <column id="2156">
+                                                    <property name="textAlign">center</property>
+                                                </column>
+                                                <header>
+                                                    <row id="2136">
+                                                        <cell id="2137">
+                                                            <property name="style">tableHeadingRow</property>
+                                                        </cell>
+                                                        <cell id="2139">
+                                                            <property name="style">tableHeadingRow</property>
+                                                            <label name="el30" id="2140">
+                                                                <property name="style">TextBlock</property>
+                                                                <property name="textAlign">center</property>
+                                                                <text-property name="text" key="LBL_FUNDS">Fonds</text-property>
+                                                            </label>
+                                                        </cell>
+                                                        <cell id="2141">
+                                                            <property name="style">tableHeadingRow</property>
+                                                            <label name="el31" id="2142">
+                                                                <property name="style">TextBlock</property>
+                                                                <property name="textAlign">center</property>
+                                                                <text-property name="text" key="LBL_INDEX">Indice</text-property>
+                                                            </label>
+                                                        </cell>
+                                                    </row>
+                                                </header>
+                                                <detail>
+                                                    <row id="2143">
+                                                        <cell id="2144">
+                                                            <property name="style">tableDetailRow</property>
+                                                            <data name="el32" id="2145">
+                                                                <property name="style">TextBlock</property>
+                                                                <property name="fontWeight">bold</property>
+                                                                <property name="resultSetColumn">Libelle</property>
+                                                            </data>
+                                                        </cell>
+                                                        <cell id="2146">
+                                                            <property name="style">tableDetailRow</property>
+                                                            <data name="el33" id="2147">
+                                                                <property name="style">TextBlock</property>
+                                                                <property name="textAlign">center</property>
+                                                                <property name="resultSetColumn">Fonds</property>
+                                                            </data>
+                                                        </cell>
+                                                        <cell id="2148">
+                                                            <property name="style">tableDetailRow</property>
+                                                            <data name="el34" id="2149">
+                                                                <property name="style">TextBlock</property>
+                                                                <property name="textAlign">center</property>
+                                                                <property name="resultSetColumn">Indice</property>
+                                                            </data>
+                                                        </cell>
+                                                    </row>
+                                                </detail>
+                                                <footer>
+                                                    <row id="2150">
+                                                        <cell id="2151"/>
+                                                        <cell id="2152"/>
+                                                        <cell id="2153"/>
+                                                    </row>
+                                                </footer>
+                                            </table>
+                                            <label name="el36" id="2134">
+                                                <property name="style">TextBlock</property>
+                                                <text-property name="text" key="LBL_STATDESC">* basées sur des données mensuelles sur 3 ans (sur 1 an si historique insuffisant)</text-property>
+                                            </label>
+                                        </cell>
+                                    </row>
+                                </grid>
+                            </cell>
+                        </row>
+                    </grid>
+                    <label id="9835">
+                        <property name="display">none</property>
+                        <expression name="bookmark">'Slot_1_3_1_OAfterParms'</expression>
+                        <text-property name="text">{"type":"component","compname":"Statistics","slotid":"Slot_1_3_1_O", "parameters":{},"alignment":"null","width":1,"height":1}</text-property>
+                    </label>
+                </cell>
+                <cell id="9822">
+                    <property name="colSpan">2</property>
+                    <property name="paddingTop">0mm</property>
+                    <property name="paddingLeft">0mm</property>
+                    <property name="paddingBottom">0mm</property>
+                    <property name="paddingRight">0mm</property>
+                    <property name="textAlign">justify</property>
+                    <property name="verticalAlign">top</property>
+                    <label id="9836">
+                        <property name="display">none</property>
+                        <expression name="bookmark">'Slot_1_3_2_OParms'</expression>
+                        <text-property name="text">{"type":"component","compname":"AllocationByAge","slotid":"Slot_1_3_2_O", "parameters":{},"alignment":"null","width":2,"height":1}</text-property>
+                    </label>
+                    <grid name="Slot_1_3_2_O" id="2275">
+                        <list-property name="userProperties">
+                            <structure>
+                                <property name="name">__Description</property>
+                                <property name="type">string</property>
+                            </structure>
+                            <structure>
+                                <property name="name">__Thumbnail</property>
+                                <property name="type">string</property>
+                            </structure>
+                            <structure>
+                                <property name="name">__Width</property>
+                                <property name="type">integer</property>
+                            </structure>
+                            <structure>
+                                <property name="name">__DescriptionKey</property>
+                                <property name="type">string</property>
+                            </structure>
+                        </list-property>
+                        <property name="__Description">Répartition par vie moyenne *</property>
+                        <property name="__Thumbnail">chart_bar.png</property>
+                        <property name="__Width">2</property>
+                        <property name="__DescriptionKey">CMP_ALLOCBYAGE</property>
+                        <property name="pageBreakInside">avoid</property>
+                        <property name="width">133.334mm</property>
+                        <expression name="bookmark">'Slot_1_3_2_O'</expression>
+                        <column id="2276"/>
+                        <row id="2277">
+                            <cell id="2278">
+                                <property name="style">TitleCell</property>
+                                <label name="el41" id="2279">
+                                    <property name="style">Title</property>
+                                    <text-property name="text" key="LBL_ALLOCBYAGE">Allocation by Age</text-property>
+                                </label>
+                            </cell>
+                        </row>
+                        <row id="2280">
+                            <cell id="2281">
+                                <table name="el47" id="2288">
+                                    <property name="dataSet">FundFactsheet.RepartitionParVieMoyenne</property>
+                                    <list-property name="boundDataColumns">
+                                        <structure>
+                                            <property name="name">Libelle</property>
+                                            <text-property name="displayName">Libelle</text-property>
+                                            <expression name="expression" type="javascript">dataSetRow["Libelle"]</expression>
+                                            <property name="dataType">string</property>
+                                        </structure>
+                                        <structure>
+                                            <property name="name">Fonds</property>
+                                            <text-property name="displayName">Fonds</text-property>
+                                            <expression name="expression" type="javascript">dataSetRow["Fonds"]</expression>
+                                            <property name="dataType">float</property>
+                                        </structure>
+                                        <structure>
+                                            <property name="name">Indice</property>
+                                            <text-property name="displayName">Indice</text-property>
+                                            <expression name="expression" type="javascript">dataSetRow["Indice"]</expression>
+                                            <property name="dataType">float</property>
+                                        </structure>
+                                    </list-property>
+                                    <property name="multiViews">
+                                        <multi-views id="2304">
+                                            <property name="index">0</property>
+                                            <property name="views">
+                                                <extended-item extensionName="Chart" name="el48" id="2305">
+                                                    <xml-property name="xmlRepresentation"><![CDATA[<ActuateChart version="2.6.1">
+ <ChartWithAxes version="2.6.1" type="Bar Chart" subType="Side-by-side" units="Points" unitSpacing="20.0">
+  <description value="">
+   <font>
+    <alignment/>
+   </font>
+  </description>
+  <block>
+   <children _type="TitleBlock" visible="false">
+    <outline>
+     <color _nil="1"/>
+    </outline>
+    <label>
+     <caption value="Bar Chart Title">
+      <font size="16.0" bold="true">
+       <alignment _body="1,"/>
+      </font>
+     </caption>
+     <background _nil="1"/>
+     <outline>
+      <color _nil="1"/>
+     </outline>
+    </label>
+   </children>
+   <children _type="Plot" horizontalSpacing="0" verticalSpacing="0">
+    <outline>
+     <color _nil="1"/>
+    </outline>
+    <clientArea>
+     <outline>
+      <color _nil="1"/>
+     </outline>
+    </clientArea>
+   </children>
+   <children _type="Legend" visible="false" itemType="0">
+    <outline>
+     <color _nil="1"/>
+    </outline>
+    <clientArea>
+     <outline>
+      <color _nil="1"/>
+     </outline>
+    </clientArea>
+    <text value=""/>
+    <separator>
+     <color _nil="1"/>
+    </separator>
+    <title>
+     <caption value=""/>
+     <background _nil="1"/>
+     <outline>
+      <color _nil="1"/>
+     </outline>
+    </title>
+   </children>
+   <bounds _body=",,212.0,130.0"/>
+   <outline>
+    <color _nil="1"/>
+   </outline>
+  </block>
+  <extendedProperties name="enable.area.alt" value="false"/>
+  <extendedProperties name="enable.drill.category" value="true"/>
+  <extendedProperties name="enable.drill.series" value="true"/>
+  <extendedProperties name="keep.hierarchy.category" value="false"/>
+  <extendedProperties name="keep.hierarchy.series" value="false"/>
+  <extendedProperties name="jschart.series.shadow" value="true"/>
+  <sampleData>
+   <baseSampleData dataSetRepresentation="A, B, C"/>
+   <orthogonalSampleData dataSetRepresentation="5,4,12"/>
+   <orthogonalSampleData dataSetRepresentation="10.0,8.0,24.0" seriesDefinitionIndex="1"/>
+  </sampleData>
+  <emptyMessage>
+   <caption value="This chart contains no data.">
+    <font>
+     <alignment _body="1,"/>
+    </font>
+   </caption>
+   <background _body=",64,127,127,127"/>
+   <outline>
+    <color _body=",128,127,127,127"/>
+   </outline>
+  </emptyMessage>
+  <axes>
+   <title>
+    <caption value="X-Axis Title">
+     <font size="14.0" bold="true" rotation="0.0">
+      <alignment _body="1,"/>
+     </font>
+    </caption>
+    <background _nil="1"/>
+    <outline>
+     <color _nil="1"/>
+    </outline>
+   </title>
+   <associatedAxes>
+    <title>
+     <caption value="Y-Axis Title">
+      <font size="14.0" bold="true" rotation="90.0">
+       <alignment _body="1,"/>
+      </font>
+     </caption>
+     <background _nil="1"/>
+     <outline>
+      <color _nil="1"/>
+     </outline>
+    </title>
+    <seriesDefinitions>
+     <query definition=""/>
+     <series _type="BarSeries" seriesIdentifier="Series 1">
+      <label visible="true">
+       <caption value="">
+        <font name="Arial" size="8.0"/>
+       </caption>
+       <background _nil="1"/>
+       <outline>
+        <color _nil="1"/>
+       </outline>
+      </label>
+      <dataDefinition definition="row[&quot;Fonds&quot;]">
+       <grouping/>
+      </dataDefinition>
+      <dataPoint separator=", ">
+       <components type="1"/>
+      </dataPoint>
+      <curveFitting _nil="1"/>
+      <riserOutline _body=",0,255,255,255"/>
+     </series>
+    </seriesDefinitions>
+    <seriesDefinitions>
+     <query definition=""/>
+     <series _type="LineSeries" seriesIdentifier="Series 2" paletteLineColor="false">
+      <label visible="true">
+       <caption value="">
+        <font name="Arial" size="8.0"/>
+       </caption>
+       <background _nil="1"/>
+       <outline>
+        <color _nil="1"/>
+       </outline>
+      </label>
+      <dataDefinition definition="row[&quot;Indice&quot;]">
+       <grouping/>
+      </dataDefinition>
+      <dataPoint separator=", ">
+       <components type="1"/>
+      </dataPoint>
+      <curveFitting _nil="1"/>
+      <markers visible="false">
+       <outline/>
+      </markers>
+      <lineAttributes thickness="3">
+       <color _body=",255,145,145,145"/>
+      </lineAttributes>
+     </series>
+    </seriesDefinitions>
+    <lineAttributes>
+     <color _body=",,55,70,143"/>
+    </lineAttributes>
+    <label>
+     <caption value="">
+      <font name="Arial" size="8.0"/>
+     </caption>
+     <background _nil="1"/>
+     <outline>
+      <color _nil="1"/>
+     </outline>
+    </label>
+    <majorGrid>
+     <lineAttributes visible="true">
+      <color _body=",,55,70,143"/>
+     </lineAttributes>
+     <tickAttributes visible="false">
+      <color _nil="1"/>
+     </tickAttributes>
+    </majorGrid>
+    <minorGrid>
+     <lineAttributes>
+      <color _nil="1"/>
+     </lineAttributes>
+     <tickAttributes>
+      <color _nil="1"/>
+     </tickAttributes>
+    </minorGrid>
+    <scale step="10.0"/>
+    <origin>
+     <value _nil="1"/>
+    </origin>
+   </associatedAxes>
+   <seriesDefinitions>
+    <query definition=""/>
+    <series seriesIdentifier="">
+     <label>
+      <caption value=""/>
+      <background _nil="1"/>
+      <outline>
+       <color _nil="1"/>
+      </outline>
+     </label>
+     <dataDefinition definition="row[&quot;Libelle&quot;]"/>
+     <dataPoint separator=", ">
+      <components type="1"/>
+     </dataPoint>
+     <curveFitting _nil="1"/>
+    </series>
+   </seriesDefinitions>
+   <lineAttributes>
+    <color _body=",,55,70,143"/>
+   </lineAttributes>
+   <label>
+    <caption value="">
+     <font name="Arial" size="8.0"/>
+    </caption>
+    <background _nil="1"/>
+    <outline>
+     <color _nil="1"/>
+    </outline>
+   </label>
+   <majorGrid>
+    <lineAttributes>
+     <color _nil="1"/>
+    </lineAttributes>
+    <tickAttributes visible="false">
+     <color _nil="1"/>
+    </tickAttributes>
+   </majorGrid>
+   <minorGrid>
+    <lineAttributes>
+     <color _nil="1"/>
+    </lineAttributes>
+    <tickAttributes>
+     <color _nil="1"/>
+    </tickAttributes>
+   </minorGrid>
+   <origin>
+    <value _nil="1"/>
+   </origin>
+  </axes>
+  <rotation>
+   <angles/>
+  </rotation>
+ </ChartWithAxes>
+</ActuateChart>
+]]></xml-property>
+                                                    <property name="outputFormat">SVG</property>
+                                                    <property name="inheritColumns">false</property>
+                                                    <property name="height">6cm</property>
+                                                    <property name="width">13.333400000000001cm</property>
+                                                    <property name="theme">FundFactsheet.THM_THEME1_CHART</property>
+                                                    <list-property name="userProperties">
+                                                        <structure>
+                                                            <property name="name">__Justification</property>
+                                                            <property name="type">string</property>
+                                                        </structure>
+                                                    </list-property>
+                                                    <property name="__Justification">X</property>
+                                                </extended-item>
+                                            </property>
+                                        </multi-views>
+                                    </property>
+                                    <column id="2302"/>
+                                    <column id="2303">
+                                        <property name="textAlign">center</property>
+                                    </column>
+                                    <column id="2310">
+                                        <property name="textAlign">center</property>
+                                    </column>
+                                    <header>
+                                        <row id="2289">
+                                            <cell id="2290">
+                                                <property name="style">tableHeadingRow</property>
+                                            </cell>
+                                            <cell id="2292">
+                                                <property name="style">tableHeadingRow</property>
+                                                <label name="el42" id="2293">
+                                                    <property name="style">TextBlock</property>
+                                                    <property name="textAlign">center</property>
+                                                    <text-property name="text" key="LBL_FUNDS">Fonds</text-property>
+                                                </label>
+                                            </cell>
+                                            <cell id="2307">
+                                                <property name="style">tableHeadingRow</property>
+                                                <label name="el43" id="2312">
+                                                    <property name="style">TextBlock</property>
+                                                    <property name="textAlign">center</property>
+                                                    <text-property name="text" key="LBL_INDEX">Indice</text-property>
+                                                </label>
+                                            </cell>
+                                        </row>
+                                    </header>
+                                    <detail>
+                                        <row id="2294">
+                                            <list-property name="highlightRules">
+                                                <structure>
+                                                    <property name="operator">eq</property>
+                                                    <property name="backgroundColor">#F6EBE7</property>
+                                                    <property name="fontSize">10pt</property>
+                                                    <expression name="testExpr" type="javascript">row.__rownum % 2</expression>
+                                                    <simple-property-list name="value1">
+                                                        <value type="javascript">1</value>
+                                                    </simple-property-list>
+                                                </structure>
+                                            </list-property>
+                                            <cell id="2295">
+                                                <property name="style">tableDetailRow</property>
+                                                <property name="fontWeight">bold</property>
+                                                <data name="el44" id="2306">
+                                                    <property name="style">TextBlock</property>
+                                                    <property name="resultSetColumn">Libelle</property>
+                                                </data>
+                                            </cell>
+                                            <cell id="2297">
+                                                <property name="style">tableDetailRow</property>
+                                                <data name="el45" id="2311">
+                                                    <property name="style">TextBlock</property>
+                                                    <property name="textAlign">center</property>
+                                                    <property name="resultSetColumn">Fonds</property>
+                                                </data>
+                                            </cell>
+                                            <cell id="2308">
+                                                <property name="style">tableDetailRow</property>
+                                                <data name="el46" id="2313">
+                                                    <property name="style">TextBlock</property>
+                                                    <property name="textAlign">center</property>
+                                                    <property name="resultSetColumn">Indice</property>
+                                                </data>
+                                            </cell>
+                                        </row>
+                                    </detail>
+                                    <footer>
+                                        <row id="2299">
+                                            <cell id="2300"/>
+                                            <cell id="2301"/>
+                                            <cell id="2309"/>
+                                        </row>
+                                    </footer>
+                                </table>
+                            </cell>
+                        </row>
+                    </grid>
+                    <label id="9837">
+                        <property name="display">none</property>
+                        <expression name="bookmark">'Slot_1_3_2_OAfterParms'</expression>
+                        <text-property name="text">{"type":"component","compname":"AllocationByAge","slotid":"Slot_1_3_2_O", "parameters":{},"alignment":"null","width":2,"height":1}</text-property>
+                    </label>
+                </cell>
+            </row>
+            <row id="9838">
+                <cell id="9839">
+                    <property name="colSpan">2</property>
+                    <property name="paddingTop">0mm</property>
+                    <property name="paddingLeft">0mm</property>
+                    <property name="paddingBottom">0mm</property>
+                    <property name="paddingRight">0mm</property>
+                    <property name="textAlign">justify</property>
+                    <property name="verticalAlign">top</property>
+                    <label id="9852">
+                        <property name="display">none</property>
+                        <expression name="bookmark">'Slot_1_4_1_OParms'</expression>
+                        <text-property name="text">{"type":"component","compname":"AllocationBySector","slotid":"Slot_1_4_1_O", "parameters":{},"alignment":"null","width":2,"height":1}</text-property>
+                    </label>
+                    <grid name="Slot_1_4_1_O" id="2158">
+                        <list-property name="userProperties">
+                            <structure>
+                                <property name="name">__Description</property>
+                                <property name="type">string</property>
+                            </structure>
+                            <structure>
+                                <property name="name">__Thumbnail</property>
+                                <property name="type">string</property>
+                            </structure>
+                            <structure>
+                                <property name="name">__Width</property>
+                                <property name="type">integer</property>
+                            </structure>
+                            <structure>
+                                <property name="name">__DescriptionKey</property>
+                                <property name="type">string</property>
+                            </structure>
+                        </list-property>
+                        <property name="__Description">Répartition sectorielle *</property>
+                        <property name="__Thumbnail">chart_bar.png</property>
+                        <property name="__Width">2</property>
+                        <property name="__DescriptionKey">CMP_ALLOCBYSECTOR</property>
+                        <property name="pageBreakInside">avoid</property>
+                        <property name="width">133.334mm</property>
+                        <expression name="bookmark">'Slot_1_4_1_O'</expression>
+                        <column id="2159"/>
+                        <row id="2160">
+                            <cell id="2161">
+                                <property name="style">TitleCell</property>
+                                <label name="el49" id="2162">
+                                    <property name="style">Title</property>
+                                    <text-property name="text" key="LBL_ALLOCBYSECTOR">Répartition sectorielle (Iboxx) (%) *</text-property>
+                                </label>
+                            </cell>
+                        </row>
+                        <row id="2163">
+                            <cell id="2164">
+                                <table name="el54" id="2171">
+                                    <property name="dataSet">FundFactsheet.RepartitionSectorielle</property>
+                                    <list-property name="boundDataColumns">
+                                        <structure>
+                                            <property name="name">Sector</property>
+                                            <text-property name="displayName">Sector</text-property>
+                                            <expression name="expression" type="javascript">dataSetRow["Sector"]</expression>
+                                            <property name="dataType">string</property>
+                                        </structure>
+                                        <structure>
+                                            <property name="name">Frac</property>
+                                            <text-property name="displayName">Frac</text-property>
+                                            <expression name="expression" type="javascript">dataSetRow["Frac"]</expression>
+                                            <property name="dataType">float</property>
+                                        </structure>
+                                    </list-property>
+                                    <property name="multiViews">
+                                        <multi-views id="2201">
+                                            <property name="index">0</property>
+                                            <property name="views">
+                                                <extended-item extensionName="Chart" name="el55" id="2202">
+                                                    <xml-property name="xmlRepresentation"><![CDATA[<ActuateChart version="2.6.1">
+ <ChartWithAxes version="2.6.1" type="Bar Chart" subType="Side-by-side" dimension="0" units="Points" orientation="0" unitSpacing="20.0">
+  <description value="">
+   <font>
+    <alignment/>
+   </font>
+  </description>
+  <block>
+   <children _type="TitleBlock" visible="false">
+    <outline>
+     <color _nil="1"/>
+    </outline>
+    <label>
+     <caption value="Bar Chart Title">
+      <font size="16.0" bold="true">
+       <alignment _body="1,"/>
+      </font>
+     </caption>
+     <background _nil="1"/>
+     <outline>
+      <color _nil="1"/>
+     </outline>
+    </label>
+   </children>
+   <children _type="Plot">
+    <outline>
+     <color _nil="1"/>
+    </outline>
+    <clientArea>
+     <outline>
+      <color _nil="1"/>
+     </outline>
+    </clientArea>
+   </children>
+   <children _type="Legend" visible="false" itemType="0">
+    <outline>
+     <color _nil="1"/>
+    </outline>
+    <clientArea>
+     <outline>
+      <color _nil="1"/>
+     </outline>
+    </clientArea>
+    <text value=""/>
+    <separator>
+     <color _nil="1"/>
+    </separator>
+    <title>
+     <caption value=""/>
+     <background _nil="1"/>
+     <outline>
+      <color _nil="1"/>
+     </outline>
+    </title>
+   </children>
+   <bounds _body=",,212.0,130.0"/>
+   <outline>
+    <color _nil="1"/>
+   </outline>
+  </block>
+  <extendedProperties name="enable.area.alt" value="false"/>
+  <extendedProperties name="enable.drill.category" value="true"/>
+  <extendedProperties name="enable.drill.series" value="true"/>
+  <extendedProperties name="keep.hierarchy.category" value="false"/>
+  <extendedProperties name="keep.hierarchy.series" value="false"/>
+  <extendedProperties name="jschart.series.shadow" value="true"/>
+  <sampleData>
+   <baseSampleData dataSetRepresentation="A, B, C"/>
+   <orthogonalSampleData dataSetRepresentation="5,4,12"/>
+  </sampleData>
+  <emptyMessage>
+   <caption value="This chart contains no data.">
+    <font>
+     <alignment _body="1,"/>
+    </font>
+   </caption>
+   <background _body=",64,127,127,127"/>
+   <outline>
+    <color _body=",128,127,127,127"/>
+   </outline>
+  </emptyMessage>
+  <axes>
+   <title>
+    <caption value="X-Axis Title">
+     <font size="14.0" bold="true" rotation="90.0">
+      <alignment _body="1,"/>
+     </font>
+    </caption>
+    <background _nil="1"/>
+    <outline>
+     <color _nil="1"/>
+    </outline>
+   </title>
+   <associatedAxes>
+    <title>
+     <caption value="Y-Axis Title">
+      <font size="14.0" bold="true" rotation="0.0">
+       <alignment _body="1,"/>
+      </font>
+     </caption>
+     <background _nil="1"/>
+     <outline>
+      <color _nil="1"/>
+     </outline>
+    </title>
+    <seriesDefinitions>
+     <query definition=""/>
+     <series _type="BarSeries" seriesIdentifier="Series 1" stacked="false">
+      <label visible="true">
+       <caption value=""/>
+       <background _nil="1"/>
+       <outline>
+        <color _nil="1"/>
+       </outline>
+      </label>
+      <dataDefinition definition="row[&quot;Frac&quot;]">
+       <grouping/>
+      </dataDefinition>
+      <dataPoint separator=", ">
+       <components type="1"/>
+      </dataPoint>
+      <curveFitting _nil="1"/>
+      <riserOutline _body=",0,255,255,255"/>
+     </series>
+    </seriesDefinitions>
+    <lineAttributes>
+     <color _nil="1"/>
+    </lineAttributes>
+    <label>
+     <caption value="">
+      <font name="Arial" size="8.0"/>
+     </caption>
+     <background _nil="1"/>
+     <outline>
+      <color _nil="1"/>
+     </outline>
+    </label>
+    <majorGrid>
+     <lineAttributes>
+      <color _nil="1"/>
+     </lineAttributes>
+     <tickAttributes>
+      <color _nil="1"/>
+     </tickAttributes>
+    </majorGrid>
+    <minorGrid>
+     <lineAttributes>
+      <color _nil="1"/>
+     </lineAttributes>
+     <tickAttributes>
+      <color _nil="1"/>
+     </tickAttributes>
+    </minorGrid>
+    <scale step="10.0"/>
+    <origin>
+     <value _nil="1"/>
+    </origin>
+   </associatedAxes>
+   <seriesDefinitions>
+    <query definition=""/>
+    <series seriesIdentifier="">
+     <label>
+      <caption value=""/>
+      <background _nil="1"/>
+      <outline>
+       <color _nil="1"/>
+      </outline>
+     </label>
+     <dataDefinition definition="row[&quot;Sector&quot;]"/>
+     <dataPoint separator=", ">
+      <components type="1"/>
+     </dataPoint>
+     <curveFitting _nil="1"/>
+    </series>
+   </seriesDefinitions>
+   <lineAttributes>
+    <color _nil="1"/>
+   </lineAttributes>
+   <label>
+    <caption value="">
+     <font name="Arial" size="8.0"/>
+    </caption>
+    <background _nil="1"/>
+    <outline>
+     <color _nil="1"/>
+    </outline>
+   </label>
+   <majorGrid>
+    <lineAttributes>
+     <color _nil="1"/>
+    </lineAttributes>
+    <tickAttributes>
+     <color _nil="1"/>
+    </tickAttributes>
+   </majorGrid>
+   <minorGrid>
+    <lineAttributes>
+     <color _nil="1"/>
+    </lineAttributes>
+    <tickAttributes>
+     <color _nil="1"/>
+    </tickAttributes>
+   </minorGrid>
+   <origin>
+    <value _nil="1"/>
+   </origin>
+  </axes>
+  <rotation>
+   <angles/>
+  </rotation>
+ </ChartWithAxes>
+</ActuateChart>
+]]></xml-property>
+                                                    <property name="outputFormat">SVG</property>
+                                                    <property name="inheritColumns">false</property>
+                                                    <property name="height">7cm</property>
+                                                    <property name="width">13.333400000000001cm</property>
+                                                    <property name="theme">FundFactsheet.THM_THEME1_CHART</property>
+                                                    <list-property name="userProperties">
+                                                        <structure>
+                                                            <property name="name">__Justification</property>
+                                                            <property name="type">string</property>
+                                                        </structure>
+                                                    </list-property>
+                                                    <property name="__Justification">X</property>
+                                                </extended-item>
+                                            </property>
+                                        </multi-views>
+                                    </property>
+                                    <list-property name="sort">
+                                        <structure>
+                                            <expression name="key" type="javascript">row["Frac"]</expression>
+                                            <property name="direction">desc</property>
+                                            <property name="strength">-1</property>
+                                        </structure>
+                                    </list-property>
+                                    <column id="2189"/>
+                                    <column id="2190">
+                                        <property name="textAlign">center</property>
+                                    </column>
+                                    <header>
+                                        <row id="2172">
+                                            <cell id="2173">
+                                                <property name="style">tableHeadingRow</property>
+                                                <label name="el50" id="2197">
+                                                    <property name="style">TextBlock</property>
+                                                    <text-property name="text">Sector</text-property>
+                                                </label>
+                                            </cell>
+                                            <cell id="2174">
+                                                <property name="style">tableHeadingRow</property>
+                                                <label name="el51" id="2199">
+                                                    <property name="style">TextBlock</property>
+                                                    <text-property name="text">%</text-property>
+                                                </label>
+                                            </cell>
+                                        </row>
+                                    </header>
+                                    <detail>
+                                        <row id="2178">
+                                            <list-property name="highlightRules">
+                                                <structure>
+                                                    <property name="operator">eq</property>
+                                                    <property name="backgroundColor">#F6EBE7</property>
+                                                    <property name="fontSize">10pt</property>
+                                                    <expression name="testExpr" type="javascript">row.__rownum % 2</expression>
+                                                    <simple-property-list name="value1">
+                                                        <value type="javascript">1</value>
+                                                    </simple-property-list>
+                                                </structure>
+                                            </list-property>
+                                            <cell id="2179">
+                                                <property name="style">tableDetailRow</property>
+                                                <property name="fontWeight">bold</property>
+                                                <data name="el52" id="2198">
+                                                    <property name="style">TextBlock</property>
+                                                    <property name="resultSetColumn">Sector</property>
+                                                </data>
+                                            </cell>
+                                            <cell id="2181">
+                                                <property name="style">tableDetailRow</property>
+                                                <data name="el53" id="2200">
+                                                    <property name="style">TextBlock</property>
+                                                    <property name="resultSetColumn">Frac</property>
+                                                </data>
+                                            </cell>
+                                        </row>
+                                    </detail>
+                                    <footer>
+                                        <row id="2185">
+                                            <cell id="2186"/>
+                                            <cell id="2187"/>
+                                        </row>
+                                    </footer>
+                                </table>
+                            </cell>
+                        </row>
+                    </grid>
+                    <label id="9853">
+                        <property name="display">none</property>
+                        <expression name="bookmark">'Slot_1_4_1_OAfterParms'</expression>
+                        <text-property name="text">{"type":"component","compname":"AllocationBySector","slotid":"Slot_1_4_1_O", "parameters":{},"alignment":"null","width":2,"height":1}</text-property>
+                    </label>
+                </cell>
+                <cell id="9841">
+                    <property name="paddingTop">0mm</property>
+                    <property name="paddingLeft">0mm</property>
+                    <property name="paddingBottom">0mm</property>
+                    <property name="paddingRight">0mm</property>
+                    <property name="textAlign">justify</property>
+                    <property name="verticalAlign">top</property>
+                    <grid name="Slot_1_4_3_B" id="9847">
+                        <list-property name="userProperties">
+                            <structure>
+                                <property name="name">__Thumbnail</property>
+                                <property name="type">string</property>
+                                <property name="isVisible">true</property>
+                            </structure>
+                            <structure>
+                                <property name="name">__Description</property>
+                                <property name="type">string</property>
+                                <property name="isVisible">true</property>
+                            </structure>
+                            <structure>
+                                <property name="name">__DescriptionKey</property>
+                                <property name="type">string</property>
+                            </structure>
+                        </list-property>
+                        <property name="__Thumbnail">eraser2.png</property>
+                        <property name="__Description">Empty Slot</property>
+                        <property name="__DescriptionKey">CMP_EMPTYSLOT</property>
+                        <property name="marginTop">0pt</property>
+                        <property name="width">100%</property>
+                        <expression name="bookmark">'Slot_1_4_3_B'</expression>
+                        <column id="9848">
+                            <property name="width">9.5cm</property>
+                        </column>
+                        <row id="9849">
+                            <property name="textAlign">center</property>
+                            <property name="verticalAlign">middle</property>
+                            <cell id="9850">
+                                <label name="el58" id="9851">
+                                    <text-property name="text"></text-property>
+                                </label>
+                            </cell>
+                        </row>
+                    </grid>
+                </cell>
+            </row>
+            <row id="9854">
+                <cell id="9855">
+                    <property name="colSpan">3</property>
+                    <property name="paddingTop">0mm</property>
+                    <property name="paddingLeft">0mm</property>
+                    <property name="paddingBottom">0mm</property>
+                    <property name="paddingRight">0mm</property>
+                    <property name="textAlign">justify</property>
+                    <property name="verticalAlign">top</property>
+                    <label id="9868">
+                        <property name="display">none</property>
+                        <expression name="bookmark">'Slot_1_5_1_OParms'</expression>
+                        <text-property name="text">{"type":"component","compname":"PortfolioPerformance","slotid":"Slot_1_5_1_O", "parameters":{},"alignment":"null","width":3,"height":1}</text-property>
+                    </label>
+                    <grid name="Slot_1_5_1_O" id="2557">
+                        <list-property name="userProperties">
+                            <structure>
+                                <property name="name">__Description</property>
+                                <property name="type">string</property>
+                            </structure>
+                            <structure>
+                                <property name="name">__Thumbnail</property>
+                                <property name="type">string</property>
+                            </structure>
+                            <structure>
+                                <property name="name">__Width</property>
+                                <property name="type">integer</property>
+                            </structure>
+                            <structure>
+                                <property name="name">__DescriptionKey</property>
+                                <property name="type">string</property>
+                            </structure>
+                        </list-property>
+                        <property name="__Description">Portfolio Performance</property>
+                        <property name="__Thumbnail">table.png</property>
+                        <property name="__Width">3</property>
+                        <property name="__DescriptionKey">CMP_PORTPERF</property>
+                        <property name="pageBreakInside">avoid</property>
+                        <expression name="bookmark">'Slot_1_5_1_O'</expression>
+                        <column id="2558"/>
+                        <row id="2559">
+                            <cell id="2560">
+                                <property name="style">TitleCell</property>
+                                <label name="el59" id="2561">
+                                    <property name="style">Title</property>
+                                    <text-property name="text" key="LBL_PORTPERF">Portfolio Performance</text-property>
+                                </label>
+                            </cell>
+                        </row>
+                        <row id="2562">
+                            <cell id="2563">
+                                <grid name="el72" id="2564">
+                                    <column id="2565">
+                                        <property name="width">35mm</property>
+                                    </column>
+                                    <column id="2566">
+                                        <property name="textAlign">center</property>
+                                    </column>
+                                    <column id="2567">
+                                        <property name="textAlign">center</property>
+                                    </column>
+                                    <row id="2568">
+                                        <cell id="2569">
+                                            <property name="colSpan">3</property>
+                                            <property name="rowSpan">1</property>
+                                            <table name="el70" id="2570">
+                                                <property name="dataSet">FundFactsheet.PortfolioPerformance</property>
+                                                <list-property name="boundDataColumns">
+                                                    <structure>
+                                                        <property name="name">Fund Name</property>
+                                                        <text-property name="displayName">Fund Name</text-property>
+                                                        <expression name="expression" type="javascript">dataSetRow["Fund Name"]</expression>
+                                                        <property name="dataType">string</property>
+                                                    </structure>
+                                                    <structure>
+                                                        <property name="name">3 Months</property>
+                                                        <text-property name="displayName">3 Months</text-property>
+                                                        <expression name="expression" type="javascript">dataSetRow["3 Months"]/100</expression>
+                                                        <property name="dataType">float</property>
+                                                        <property name="allowExport">true</property>
+                                                    </structure>
+                                                    <structure>
+                                                        <property name="name">1 Year</property>
+                                                        <text-property name="displayName">1 Year</text-property>
+                                                        <expression name="expression" type="javascript">dataSetRow["1 Year"]/100</expression>
+                                                        <property name="dataType">float</property>
+                                                        <property name="allowExport">true</property>
+                                                    </structure>
+                                                    <structure>
+                                                        <property name="name">3 Years</property>
+                                                        <text-property name="displayName">3 Years</text-property>
+                                                        <expression name="expression" type="javascript">dataSetRow["3 Years"]/100</expression>
+                                                        <property name="dataType">float</property>
+                                                        <property name="allowExport">true</property>
+                                                    </structure>
+                                                    <structure>
+                                                        <property name="name">5 Years</property>
+                                                        <text-property name="displayName">5 Years</text-property>
+                                                        <expression name="expression" type="javascript">dataSetRow["5 Years"]/100</expression>
+                                                        <property name="dataType">float</property>
+                                                        <property name="allowExport">true</property>
+                                                    </structure>
+                                                </list-property>
+                                                <column id="2588">
+                                                    <property name="width">2.875in</property>
+                                                </column>
+                                                <column id="2589">
+                                                    <property name="textAlign">center</property>
+                                                </column>
+                                                <column id="2590">
+                                                    <property name="textAlign">center</property>
+                                                </column>
+                                                <column id="2606">
+                                                    <property name="textAlign">center</property>
+                                                </column>
+                                                <column id="2602">
+                                                    <property name="textAlign">center</property>
+                                                </column>
+                                                <header>
+                                                    <row id="2571">
+                                                        <cell id="2572">
+                                                            <property name="style">tableHeadingRow</property>
+                                                            <label name="el60" id="2593">
+                                                                <property name="textAlign">left</property>
+                                                                <text-property name="text">Fund Name</text-property>
+                                                            </label>
+                                                        </cell>
+                                                        <cell id="2573">
+                                                            <property name="style">tableHeadingRow</property>
+                                                            <label name="el61" id="2595">
+                                                                <text-property name="text">3 Months</text-property>
+                                                            </label>
+                                                        </cell>
+                                                        <cell id="2575">
+                                                            <property name="style">tableHeadingRow</property>
+                                                            <label name="el62" id="2597">
+                                                                <text-property name="text">1 Year</text-property>
+                                                            </label>
+                                                        </cell>
+                                                        <cell id="2603">
+                                                            <property name="style">tableHeadingRow</property>
+                                                            <label name="el63" id="2607">
+                                                                <text-property name="text">3 Years</text-property>
+                                                            </label>
+                                                        </cell>
+                                                        <cell id="2599">
+                                                            <property name="style">tableHeadingRow</property>
+                                                            <label name="el64" id="2609">
+                                                                <text-property name="text">5 Years</text-property>
+                                                            </label>
+                                                        </cell>
+                                                    </row>
+                                                </header>
+                                                <detail>
+                                                    <row id="2577">
+                                                        <cell id="2578">
+                                                            <property name="style">tableDetailRow</property>
+                                                            <data name="el65" id="2594">
+                                                                <property name="fontWeight">bold</property>
+                                                                <property name="resultSetColumn">Fund Name</property>
+                                                            </data>
+                                                        </cell>
+                                                        <cell id="2580">
+                                                            <property name="style">tableDetailRow</property>
+                                                            <data name="el66" id="2596">
+                                                                <structure name="numberFormat">
+                                                                    <property name="category">Percent</property>
+                                                                    <property name="pattern">###0.0%;(###0.0)%{RoundingMode=HALF_UP}</property>
+                                                                </structure>
+                                                                <property name="resultSetColumn">3 Months</property>
+                                                            </data>
+                                                        </cell>
+                                                        <cell id="2582">
+                                                            <property name="style">tableDetailRow</property>
+                                                            <data name="el67" id="2598">
+                                                                <structure name="numberFormat">
+                                                                    <property name="category">Percent</property>
+                                                                    <property name="pattern">###0.0%;(###0.0)%{RoundingMode=HALF_UP}</property>
+                                                                </structure>
+                                                                <property name="resultSetColumn">1 Year</property>
+                                                            </data>
+                                                        </cell>
+                                                        <cell id="2604">
+                                                            <property name="style">tableDetailRow</property>
+                                                            <data name="el68" id="2608">
+                                                                <structure name="numberFormat">
+                                                                    <property name="category">Percent</property>
+                                                                    <property name="pattern">###0.0%;(###0.0)%{RoundingMode=HALF_UP}</property>
+                                                                </structure>
+                                                                <property name="resultSetColumn">3 Years</property>
+                                                            </data>
+                                                        </cell>
+                                                        <cell id="2600">
+                                                            <property name="style">tableDetailRow</property>
+                                                            <data name="el69" id="2610">
+                                                                <structure name="numberFormat">
+                                                                    <property name="category">Percent</property>
+                                                                    <property name="pattern">###0.0%;(###0.0)%{RoundingMode=HALF_UP}</property>
+                                                                </structure>
+                                                                <property name="resultSetColumn">5 Years</property>
+                                                            </data>
+                                                        </cell>
+                                                    </row>
+                                                </detail>
+                                                <footer>
+                                                    <row id="2584">
+                                                        <cell id="2585"/>
+                                                        <cell id="2586"/>
+                                                        <cell id="2587"/>
+                                                        <cell id="2605"/>
+                                                        <cell id="2601"/>
+                                                    </row>
+                                                </footer>
+                                            </table>
+                                            <label name="el71" id="2591">
+                                                <property name="style">TextBlock</property>
+                                                <text-property name="text" key="LBL_PORTPERFDESC">* basées sur des données mensuelles sur 3 ans (sur 1 an si historique insuffisant)</text-property>
+                                            </label>
+                                        </cell>
+                                    </row>
+                                </grid>
+                            </cell>
+                        </row>
+                    </grid>
+                    <label id="9869">
+                        <property name="display">none</property>
+                        <expression name="bookmark">'Slot_1_5_1_OAfterParms'</expression>
+                        <text-property name="text">{"type":"component","compname":"PortfolioPerformance","slotid":"Slot_1_5_1_O", "parameters":{},"alignment":"null","width":3,"height":1}</text-property>
+                    </label>
+                </cell>
+            </row>
+            <row id="9870">
+                <cell id="9871">
+                    <property name="paddingTop">0mm</property>
+                    <property name="paddingLeft">0mm</property>
+                    <property name="paddingBottom">0mm</property>
+                    <property name="paddingRight">0mm</property>
+                    <property name="textAlign">justify</property>
+                    <property name="verticalAlign">top</property>
+                    <grid name="Slot_1_6_1_B" id="202">
+                        <list-property name="userProperties">
+                            <structure>
+                                <property name="name">__Thumbnail</property>
+                                <property name="type">string</property>
+                                <property name="isVisible">true</property>
+                            </structure>
+                            <structure>
+                                <property name="name">__Description</property>
+                                <property name="type">string</property>
+                                <property name="isVisible">true</property>
+                            </structure>
+                            <structure>
+                                <property name="name">__DescriptionKey</property>
+                                <property name="type">string</property>
+                            </structure>
+                        </list-property>
+                        <property name="__Thumbnail">eraser2.png</property>
+                        <property name="__Description">Empty Slot</property>
+                        <property name="__DescriptionKey">CMP_EMPTYSLOT</property>
+                        <property name="marginTop">0pt</property>
+                        <property name="height">1cm</property>
+                        <property name="width">100%</property>
+                        <expression name="bookmark">'Slot_1_6_1_B'</expression>
+                        <column id="203">
+                            <property name="width">9.5cm</property>
+                        </column>
+                        <row id="204">
+                            <property name="textAlign">center</property>
+                            <property name="verticalAlign">middle</property>
+                            <cell id="205">
+                                <label name="el76" id="206">
+                                    <text-property name="text"></text-property>
+                                </label>
+                            </cell>
+                        </row>
+                    </grid>
+                </cell>
+                <cell id="9872">
+                    <property name="paddingTop">0mm</property>
+                    <property name="paddingLeft">0mm</property>
+                    <property name="paddingBottom">0mm</property>
+                    <property name="paddingRight">0mm</property>
+                    <property name="textAlign">justify</property>
+                    <property name="verticalAlign">top</property>
+                    <grid name="Slot_1_6_2_B" id="9874">
+                        <list-property name="userProperties">
+                            <structure>
+                                <property name="name">__Thumbnail</property>
+                                <property name="type">string</property>
+                                <property name="isVisible">true</property>
+                            </structure>
+                            <structure>
+                                <property name="name">__Description</property>
+                                <property name="type">string</property>
+                                <property name="isVisible">true</property>
+                            </structure>
+                            <structure>
+                                <property name="name">__DescriptionKey</property>
+                                <property name="type">string</property>
+                            </structure>
+                        </list-property>
+                        <property name="__Thumbnail">eraser2.png</property>
+                        <property name="__Description">Empty Slot</property>
+                        <property name="__DescriptionKey">CMP_EMPTYSLOT</property>
+                        <property name="marginTop">0pt</property>
+                        <property name="width">100%</property>
+                        <expression name="bookmark">'Slot_1_6_2_B'</expression>
+                        <column id="9875">
+                            <property name="width">9.5cm</property>
+                        </column>
+                        <row id="9876">
+                            <property name="textAlign">center</property>
+                            <property name="verticalAlign">middle</property>
+                            <cell id="9877">
+                                <label name="el77" id="9878">
+                                    <text-property name="text"></text-property>
+                                </label>
+                            </cell>
+                        </row>
+                    </grid>
+                </cell>
+                <cell id="9873">
+                    <property name="paddingTop">0mm</property>
+                    <property name="paddingLeft">0mm</property>
+                    <property name="paddingBottom">0mm</property>
+                    <property name="paddingRight">0mm</property>
+                    <property name="textAlign">justify</property>
+                    <property name="verticalAlign">top</property>
+                    <grid name="Slot_1_6_3_B" id="9879">
+                        <list-property name="userProperties">
+                            <structure>
+                                <property name="name">__Thumbnail</property>
+                                <property name="type">string</property>
+                                <property name="isVisible">true</property>
+                            </structure>
+                            <structure>
+                                <property name="name">__Description</property>
+                                <property name="type">string</property>
+                                <property name="isVisible">true</property>
+                            </structure>
+                            <structure>
+                                <property name="name">__DescriptionKey</property>
+                                <property name="type">string</property>
+                            </structure>
+                        </list-property>
+                        <property name="__Thumbnail">eraser2.png</property>
+                        <property name="__Description">Empty Slot</property>
+                        <property name="__DescriptionKey">CMP_EMPTYSLOT</property>
+                        <property name="marginTop">0pt</property>
+                        <property name="width">100%</property>
+                        <expression name="bookmark">'Slot_1_6_3_B'</expression>
+                        <column id="9880">
+                            <property name="width">9.5cm</property>
+                        </column>
+                        <row id="9881">
+                            <property name="textAlign">center</property>
+                            <property name="verticalAlign">middle</property>
+                            <cell id="9882">
+                                <label name="el78" id="9883">
+                                    <text-property name="text"></text-property>
+                                </label>
+                            </cell>
+                        </row>
+                    </grid>
+                </cell>
+            </row>
+        </grid>
+    </body>
+</report>

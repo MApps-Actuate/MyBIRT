@@ -1,0 +1,1972 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<library xmlns="http://www.eclipse.org/birt/2005/design" version="3.2.23" id="1">
+    <property name="createdBy">Eclipse BIRT Designer Version 3.7.2.v20121022-1705 Build &lt;3.7.2.v20121022-1705></property>
+    <simple-property-list name="includeResource">
+        <value>myBIRT/Reflective</value>
+    </simple-property-list>
+    <property name="units">in</property>
+    <property name="theme">defaultTheme</property>
+    <data-sources>
+        <script-data-source name="Scripted Data Source" id="10"/>
+        <oda-data-source extensionID="org.eclipse.birt.report.data.oda.jdbc" name="Classic Models" id="2060">
+            <list-property name="privateDriverProperties">
+                <ex-property>
+                    <name>contentBidiFormatStr</name>
+                    <value>ILYNN</value>
+                </ex-property>
+                <ex-property>
+                    <name>metadataBidiFormatStr</name>
+                    <value>ILYNN</value>
+                </ex-property>
+            </list-property>
+            <property name="odaDriverClass">org.eclipse.birt.report.data.oda.sampledb.Driver</property>
+            <property name="odaURL">jdbc:classicmodels:sampledb</property>
+            <property name="odaUser">ClassicModels</property>
+        </oda-data-source>
+        <oda-data-source extensionID="com.actuate.data.oda.static" name="Static Data Source" id="2104"/>
+    </data-sources>
+    <data-sets>
+        <script-data-set name="_ListOfDataSets" id="11">
+            <property name="eventHandlerClass">com.actuate.ps.mybirt.eventhandlers.DataSetListDataAdapter</property>
+            <list-property name="resultSetHints">
+                <structure>
+                    <property name="position">1</property>
+                    <property name="name">datasetname</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">2</property>
+                    <property name="name">localname</property>
+                    <property name="dataType">string</property>
+                </structure>
+            </list-property>
+            <list-property name="columnHints">
+                <structure>
+                    <property name="columnName">datasetname</property>
+                    <property name="analysis">dimension</property>
+                </structure>
+                <structure>
+                    <property name="columnName">localname</property>
+                    <property name="analysis">dimension</property>
+                </structure>
+            </list-property>
+            <structure name="cachedMetaData">
+                <list-property name="resultSet">
+                    <structure>
+                        <property name="position">1</property>
+                        <property name="name">datasetname</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">2</property>
+                        <property name="name">localname</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                </list-property>
+            </structure>
+            <property name="dataSource">Scripted Data Source</property>
+        </script-data-set>
+        <oda-data-set extensionID="org.eclipse.birt.report.data.oda.jdbc.JdbcSelectDataSet" name="customers" id="2061">
+            <list-property name="columnHints">
+                <structure>
+                    <property name="columnName">CUSTOMERNUMBER</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="displayName">CUSTOMERNUMBER</text-property>
+                    <text-property name="heading">CUSTOMERNUMBER</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">CUSTOMERNAME</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">CUSTOMERNAME</text-property>
+                    <text-property name="heading">CUSTOMERNAME</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">CONTACTLASTNAME</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">CONTACTLASTNAME</text-property>
+                    <text-property name="heading">CONTACTLASTNAME</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">CONTACTFIRSTNAME</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">CONTACTFIRSTNAME</text-property>
+                    <text-property name="heading">CONTACTFIRSTNAME</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">PHONE</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">PHONE</text-property>
+                    <text-property name="heading">PHONE</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">ADDRESSLINE1</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">ADDRESSLINE1</text-property>
+                    <text-property name="heading">ADDRESSLINE1</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">ADDRESSLINE2</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">ADDRESSLINE2</text-property>
+                    <text-property name="heading">ADDRESSLINE2</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">CITY</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">CITY</text-property>
+                    <text-property name="heading">CITY</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">STATE</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">STATE</text-property>
+                    <text-property name="heading">STATE</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">POSTALCODE</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">POSTALCODE</text-property>
+                    <text-property name="heading">POSTALCODE</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">COUNTRY</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">COUNTRY</text-property>
+                    <text-property name="heading">COUNTRY</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">SALESREPEMPLOYEENUMBER</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="displayName">SALESREPEMPLOYEENUMBER</text-property>
+                    <text-property name="heading">SALESREPEMPLOYEENUMBER</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">CREDITLIMIT</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="displayName">CREDITLIMIT</text-property>
+                    <text-property name="heading">CREDITLIMIT</text-property>
+                </structure>
+            </list-property>
+            <structure name="cachedMetaData">
+                <list-property name="resultSet">
+                    <structure>
+                        <property name="position">1</property>
+                        <property name="name">CUSTOMERNUMBER</property>
+                        <property name="dataType">integer</property>
+                    </structure>
+                    <structure>
+                        <property name="position">2</property>
+                        <property name="name">CUSTOMERNAME</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">3</property>
+                        <property name="name">CONTACTLASTNAME</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">4</property>
+                        <property name="name">CONTACTFIRSTNAME</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">5</property>
+                        <property name="name">PHONE</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">6</property>
+                        <property name="name">ADDRESSLINE1</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">7</property>
+                        <property name="name">ADDRESSLINE2</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">8</property>
+                        <property name="name">CITY</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">9</property>
+                        <property name="name">STATE</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">10</property>
+                        <property name="name">POSTALCODE</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">11</property>
+                        <property name="name">COUNTRY</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">12</property>
+                        <property name="name">SALESREPEMPLOYEENUMBER</property>
+                        <property name="dataType">integer</property>
+                    </structure>
+                    <structure>
+                        <property name="position">13</property>
+                        <property name="name">CREDITLIMIT</property>
+                        <property name="dataType">float</property>
+                    </structure>
+                </list-property>
+            </structure>
+            <property name="dataSource">Classic Models</property>
+            <list-property name="resultSet">
+                <structure>
+                    <property name="position">1</property>
+                    <property name="name">CUSTOMERNUMBER</property>
+                    <property name="nativeName">CUSTOMERNUMBER</property>
+                    <property name="dataType">integer</property>
+                    <property name="nativeDataType">4</property>
+                </structure>
+                <structure>
+                    <property name="position">2</property>
+                    <property name="name">CUSTOMERNAME</property>
+                    <property name="nativeName">CUSTOMERNAME</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">3</property>
+                    <property name="name">CONTACTLASTNAME</property>
+                    <property name="nativeName">CONTACTLASTNAME</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">4</property>
+                    <property name="name">CONTACTFIRSTNAME</property>
+                    <property name="nativeName">CONTACTFIRSTNAME</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">5</property>
+                    <property name="name">PHONE</property>
+                    <property name="nativeName">PHONE</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">6</property>
+                    <property name="name">ADDRESSLINE1</property>
+                    <property name="nativeName">ADDRESSLINE1</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">7</property>
+                    <property name="name">ADDRESSLINE2</property>
+                    <property name="nativeName">ADDRESSLINE2</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">8</property>
+                    <property name="name">CITY</property>
+                    <property name="nativeName">CITY</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">9</property>
+                    <property name="name">STATE</property>
+                    <property name="nativeName">STATE</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">10</property>
+                    <property name="name">POSTALCODE</property>
+                    <property name="nativeName">POSTALCODE</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">11</property>
+                    <property name="name">COUNTRY</property>
+                    <property name="nativeName">COUNTRY</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">12</property>
+                    <property name="name">SALESREPEMPLOYEENUMBER</property>
+                    <property name="nativeName">SALESREPEMPLOYEENUMBER</property>
+                    <property name="dataType">integer</property>
+                    <property name="nativeDataType">4</property>
+                </structure>
+                <structure>
+                    <property name="position">13</property>
+                    <property name="name">CREDITLIMIT</property>
+                    <property name="nativeName">CREDITLIMIT</property>
+                    <property name="dataType">float</property>
+                    <property name="nativeDataType">8</property>
+                </structure>
+            </list-property>
+            <xml-property name="queryText"><![CDATA[select *
+from customers]]></xml-property>
+            <xml-property name="designerValues"><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<model:DesignValues xmlns:design="http://www.eclipse.org/datatools/connectivity/oda/design" xmlns:model="http://www.eclipse.org/birt/report/model/adapter/odaModel">
+  <Version>2.0</Version>
+  <design:ResultSets derivedMetaData="true">
+    <design:resultSetDefinitions>
+      <design:resultSetColumns>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>CUSTOMERNUMBER</design:name>
+              <design:position>1</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>4</design:nativeDataTypeCode>
+            <design:precision>10</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>CUSTOMERNUMBER</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>CUSTOMERNUMBER</design:label>
+            <design:formattingHints>
+              <design:displaySize>11</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>CUSTOMERNAME</design:name>
+              <design:position>2</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>50</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>CUSTOMERNAME</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>CUSTOMERNAME</design:label>
+            <design:formattingHints>
+              <design:displaySize>50</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>CONTACTLASTNAME</design:name>
+              <design:position>3</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>50</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>CONTACTLASTNAME</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>CONTACTLASTNAME</design:label>
+            <design:formattingHints>
+              <design:displaySize>50</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>CONTACTFIRSTNAME</design:name>
+              <design:position>4</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>50</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>CONTACTFIRSTNAME</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>CONTACTFIRSTNAME</design:label>
+            <design:formattingHints>
+              <design:displaySize>50</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>PHONE</design:name>
+              <design:position>5</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>50</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>PHONE</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>PHONE</design:label>
+            <design:formattingHints>
+              <design:displaySize>50</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>ADDRESSLINE1</design:name>
+              <design:position>6</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>50</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>ADDRESSLINE1</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>ADDRESSLINE1</design:label>
+            <design:formattingHints>
+              <design:displaySize>50</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>ADDRESSLINE2</design:name>
+              <design:position>7</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>50</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>ADDRESSLINE2</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>ADDRESSLINE2</design:label>
+            <design:formattingHints>
+              <design:displaySize>50</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>CITY</design:name>
+              <design:position>8</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>50</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>CITY</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>CITY</design:label>
+            <design:formattingHints>
+              <design:displaySize>50</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>STATE</design:name>
+              <design:position>9</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>50</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>STATE</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>STATE</design:label>
+            <design:formattingHints>
+              <design:displaySize>50</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>POSTALCODE</design:name>
+              <design:position>10</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>15</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>POSTALCODE</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>POSTALCODE</design:label>
+            <design:formattingHints>
+              <design:displaySize>15</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>COUNTRY</design:name>
+              <design:position>11</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>50</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>COUNTRY</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>COUNTRY</design:label>
+            <design:formattingHints>
+              <design:displaySize>50</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>SALESREPEMPLOYEENUMBER</design:name>
+              <design:position>12</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>4</design:nativeDataTypeCode>
+            <design:precision>10</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>SALESREPEMPLOYEENUMBER</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>SALESREPEMPLOYEENUMBER</design:label>
+            <design:formattingHints>
+              <design:displaySize>11</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>CREDITLIMIT</design:name>
+              <design:position>13</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>8</design:nativeDataTypeCode>
+            <design:precision>15</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>CREDITLIMIT</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>CREDITLIMIT</design:label>
+            <design:formattingHints>
+              <design:displaySize>22</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+      </design:resultSetColumns>
+      <design:criteria/>
+    </design:resultSetDefinitions>
+  </design:ResultSets>
+</model:DesignValues>]]></xml-property>
+        </oda-data-set>
+        <oda-data-set extensionID="org.eclipse.birt.report.data.oda.jdbc.JdbcSelectDataSet" name="orders" id="2062">
+            <list-property name="columnHints">
+                <structure>
+                    <property name="columnName">ORDERNUMBER</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="displayName">ORDERNUMBER</text-property>
+                    <text-property name="heading">ORDERNUMBER</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">ORDERDATE</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">ORDERDATE</text-property>
+                    <text-property name="heading">ORDERDATE</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">REQUIREDDATE</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">REQUIREDDATE</text-property>
+                    <text-property name="heading">REQUIREDDATE</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">SHIPPEDDATE</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">SHIPPEDDATE</text-property>
+                    <text-property name="heading">SHIPPEDDATE</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">STATUS</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">STATUS</text-property>
+                    <text-property name="heading">STATUS</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">COMMENTS</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">COMMENTS</text-property>
+                    <text-property name="heading">COMMENTS</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">CUSTOMERNUMBER</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="displayName">CUSTOMERNUMBER</text-property>
+                    <text-property name="heading">CUSTOMERNUMBER</text-property>
+                </structure>
+            </list-property>
+            <structure name="cachedMetaData">
+                <list-property name="resultSet">
+                    <structure>
+                        <property name="position">1</property>
+                        <property name="name">ORDERNUMBER</property>
+                        <property name="dataType">integer</property>
+                    </structure>
+                    <structure>
+                        <property name="position">2</property>
+                        <property name="name">ORDERDATE</property>
+                        <property name="dataType">date</property>
+                    </structure>
+                    <structure>
+                        <property name="position">3</property>
+                        <property name="name">REQUIREDDATE</property>
+                        <property name="dataType">date</property>
+                    </structure>
+                    <structure>
+                        <property name="position">4</property>
+                        <property name="name">SHIPPEDDATE</property>
+                        <property name="dataType">date</property>
+                    </structure>
+                    <structure>
+                        <property name="position">5</property>
+                        <property name="name">STATUS</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">6</property>
+                        <property name="name">COMMENTS</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">7</property>
+                        <property name="name">CUSTOMERNUMBER</property>
+                        <property name="dataType">integer</property>
+                    </structure>
+                </list-property>
+            </structure>
+            <property name="dataSource">Classic Models</property>
+            <list-property name="resultSet">
+                <structure>
+                    <property name="position">1</property>
+                    <property name="name">ORDERNUMBER</property>
+                    <property name="nativeName">ORDERNUMBER</property>
+                    <property name="dataType">integer</property>
+                    <property name="nativeDataType">4</property>
+                </structure>
+                <structure>
+                    <property name="position">2</property>
+                    <property name="name">ORDERDATE</property>
+                    <property name="nativeName">ORDERDATE</property>
+                    <property name="dataType">date</property>
+                    <property name="nativeDataType">91</property>
+                </structure>
+                <structure>
+                    <property name="position">3</property>
+                    <property name="name">REQUIREDDATE</property>
+                    <property name="nativeName">REQUIREDDATE</property>
+                    <property name="dataType">date</property>
+                    <property name="nativeDataType">91</property>
+                </structure>
+                <structure>
+                    <property name="position">4</property>
+                    <property name="name">SHIPPEDDATE</property>
+                    <property name="nativeName">SHIPPEDDATE</property>
+                    <property name="dataType">date</property>
+                    <property name="nativeDataType">91</property>
+                </structure>
+                <structure>
+                    <property name="position">5</property>
+                    <property name="name">STATUS</property>
+                    <property name="nativeName">STATUS</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">6</property>
+                    <property name="name">COMMENTS</property>
+                    <property name="nativeName">COMMENTS</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">7</property>
+                    <property name="name">CUSTOMERNUMBER</property>
+                    <property name="nativeName">CUSTOMERNUMBER</property>
+                    <property name="dataType">integer</property>
+                    <property name="nativeDataType">4</property>
+                </structure>
+            </list-property>
+            <xml-property name="queryText"><![CDATA[select *
+from orders]]></xml-property>
+            <xml-property name="designerValues"><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<model:DesignValues xmlns:design="http://www.eclipse.org/datatools/connectivity/oda/design" xmlns:model="http://www.eclipse.org/birt/report/model/adapter/odaModel">
+  <Version>2.0</Version>
+  <design:ResultSets derivedMetaData="true">
+    <design:resultSetDefinitions>
+      <design:resultSetColumns>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>ORDERNUMBER</design:name>
+              <design:position>1</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>4</design:nativeDataTypeCode>
+            <design:precision>10</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>ORDERNUMBER</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>ORDERNUMBER</design:label>
+            <design:formattingHints>
+              <design:displaySize>11</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>ORDERDATE</design:name>
+              <design:position>2</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>91</design:nativeDataTypeCode>
+            <design:precision>10</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>ORDERDATE</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>ORDERDATE</design:label>
+            <design:formattingHints>
+              <design:displaySize>10</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>REQUIREDDATE</design:name>
+              <design:position>3</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>91</design:nativeDataTypeCode>
+            <design:precision>10</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>REQUIREDDATE</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>REQUIREDDATE</design:label>
+            <design:formattingHints>
+              <design:displaySize>10</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>SHIPPEDDATE</design:name>
+              <design:position>4</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>91</design:nativeDataTypeCode>
+            <design:precision>10</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>SHIPPEDDATE</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>SHIPPEDDATE</design:label>
+            <design:formattingHints>
+              <design:displaySize>10</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>STATUS</design:name>
+              <design:position>5</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>15</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>STATUS</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>STATUS</design:label>
+            <design:formattingHints>
+              <design:displaySize>15</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>COMMENTS</design:name>
+              <design:position>6</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>32700</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>COMMENTS</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>COMMENTS</design:label>
+            <design:formattingHints>
+              <design:displaySize>32700</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>CUSTOMERNUMBER</design:name>
+              <design:position>7</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>4</design:nativeDataTypeCode>
+            <design:precision>10</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>CUSTOMERNUMBER</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>CUSTOMERNUMBER</design:label>
+            <design:formattingHints>
+              <design:displaySize>11</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+      </design:resultSetColumns>
+      <design:criteria/>
+    </design:resultSetDefinitions>
+  </design:ResultSets>
+</model:DesignValues>]]></xml-property>
+        </oda-data-set>
+        <oda-data-set extensionID="org.eclipse.birt.report.data.oda.jdbc.JdbcSelectDataSet" name="payments" id="2063">
+            <property name="nullsOrdering">nulls lowest</property>
+            <list-property name="columnHints">
+                <structure>
+                    <property name="columnName">CUSTOMERNUMBER</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="displayName">CUSTOMERNUMBER</text-property>
+                    <text-property name="heading">CUSTOMERNUMBER</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">CHECKNUMBER</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">CHECKNUMBER</text-property>
+                    <text-property name="heading">CHECKNUMBER</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">PAYMENTDATE</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">PAYMENTDATE</text-property>
+                    <text-property name="heading">PAYMENTDATE</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">AMOUNT</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="displayName">AMOUNT</text-property>
+                    <text-property name="heading">AMOUNT</text-property>
+                </structure>
+            </list-property>
+            <structure name="cachedMetaData">
+                <list-property name="resultSet">
+                    <structure>
+                        <property name="position">1</property>
+                        <property name="name">CUSTOMERNUMBER</property>
+                        <property name="dataType">integer</property>
+                    </structure>
+                    <structure>
+                        <property name="position">2</property>
+                        <property name="name">CHECKNUMBER</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">3</property>
+                        <property name="name">PAYMENTDATE</property>
+                        <property name="dataType">date</property>
+                    </structure>
+                    <structure>
+                        <property name="position">4</property>
+                        <property name="name">AMOUNT</property>
+                        <property name="dataType">float</property>
+                    </structure>
+                </list-property>
+            </structure>
+            <property name="rowFetchLimit">10</property>
+            <property name="dataSource">Classic Models</property>
+            <list-property name="resultSet">
+                <structure>
+                    <property name="position">1</property>
+                    <property name="name">CUSTOMERNUMBER</property>
+                    <property name="nativeName">CUSTOMERNUMBER</property>
+                    <property name="dataType">integer</property>
+                    <property name="nativeDataType">4</property>
+                </structure>
+                <structure>
+                    <property name="position">2</property>
+                    <property name="name">CHECKNUMBER</property>
+                    <property name="nativeName">CHECKNUMBER</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">3</property>
+                    <property name="name">PAYMENTDATE</property>
+                    <property name="nativeName">PAYMENTDATE</property>
+                    <property name="dataType">date</property>
+                    <property name="nativeDataType">91</property>
+                </structure>
+                <structure>
+                    <property name="position">4</property>
+                    <property name="name">AMOUNT</property>
+                    <property name="nativeName">AMOUNT</property>
+                    <property name="dataType">float</property>
+                    <property name="nativeDataType">8</property>
+                </structure>
+            </list-property>
+            <xml-property name="queryText"><![CDATA[select *
+from payments]]></xml-property>
+            <xml-property name="designerValues"><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<model:DesignValues xmlns:design="http://www.eclipse.org/datatools/connectivity/oda/design" xmlns:model="http://www.eclipse.org/birt/report/model/adapter/odaModel">
+  <Version>2.0</Version>
+  <design:ResultSets derivedMetaData="true">
+    <design:resultSetDefinitions>
+      <design:resultSetColumns>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>CUSTOMERNUMBER</design:name>
+              <design:position>1</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>4</design:nativeDataTypeCode>
+            <design:precision>10</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>CUSTOMERNUMBER</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>CUSTOMERNUMBER</design:label>
+            <design:formattingHints>
+              <design:displaySize>11</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>CHECKNUMBER</design:name>
+              <design:position>2</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>50</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>CHECKNUMBER</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>CHECKNUMBER</design:label>
+            <design:formattingHints>
+              <design:displaySize>50</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>PAYMENTDATE</design:name>
+              <design:position>3</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>91</design:nativeDataTypeCode>
+            <design:precision>10</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>PAYMENTDATE</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>PAYMENTDATE</design:label>
+            <design:formattingHints>
+              <design:displaySize>10</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>AMOUNT</design:name>
+              <design:position>4</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>8</design:nativeDataTypeCode>
+            <design:precision>15</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>AMOUNT</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>AMOUNT</design:label>
+            <design:formattingHints>
+              <design:displaySize>22</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+      </design:resultSetColumns>
+      <design:criteria/>
+    </design:resultSetDefinitions>
+  </design:ResultSets>
+</model:DesignValues>]]></xml-property>
+        </oda-data-set>
+        <script-data-set name="_ListOfFields" id="50">
+            <property name="eventHandlerClass">com.actuate.ps.mybirt.eventhandlers.DataSetFieldListDataAdapter</property>
+            <list-property name="resultSetHints">
+                <structure>
+                    <property name="position">1</property>
+                    <property name="name">fieldname</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">2</property>
+                    <property name="name">datatype</property>
+                    <property name="dataType">string</property>
+                </structure>
+            </list-property>
+            <list-property name="columnHints">
+                <structure>
+                    <property name="columnName">fieldname</property>
+                    <property name="analysis">dimension</property>
+                </structure>
+                <structure>
+                    <property name="columnName">datatype</property>
+                    <property name="analysis">dimension</property>
+                </structure>
+            </list-property>
+            <list-property name="parameters">
+                <structure>
+                    <property name="name">dataset</property>
+                    <property name="dataType">string</property>
+                    <property name="position">1</property>
+                    <expression name="defaultValue" type="javascript">params["Dataset"].value</expression>
+                    <property name="isInput">true</property>
+                    <property name="isOutput">false</property>
+                </structure>
+            </list-property>
+            <structure name="cachedMetaData">
+                <list-property name="resultSet">
+                    <structure>
+                        <property name="position">1</property>
+                        <property name="name">fieldname</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">2</property>
+                        <property name="name">datatype</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                </list-property>
+            </structure>
+            <property name="dataSource">Scripted Data Source</property>
+        </script-data-set>
+        <oda-data-set extensionID="com.actuate.data.oda.static.dataSet" name="None selected" id="2105">
+            <list-property name="columnHints">
+                <structure>
+                    <property name="columnName">No data selected</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="displayName">No data selected</text-property>
+                    <text-property name="heading">No data selected</text-property>
+                </structure>
+            </list-property>
+            <list-property name="parameters"/>
+            <structure name="cachedMetaData">
+                <list-property name="resultSet">
+                    <structure>
+                        <property name="position">1</property>
+                        <property name="name">No data selected</property>
+                        <property name="dataType">integer</property>
+                    </structure>
+                </list-property>
+            </structure>
+            <property name="dataSource">Static Data Source</property>
+            <list-property name="resultSet">
+                <structure>
+                    <property name="position">1</property>
+                    <property name="name">No data selected</property>
+                    <property name="nativeName">No data selected</property>
+                    <property name="dataType">integer</property>
+                    <property name="nativeDataType">3</property>
+                </structure>
+            </list-property>
+            <xml-property name="queryText"><![CDATA[{"Columns":["No data selected"],"Types":[3]}]]></xml-property>
+            <xml-property name="designerValues"><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<model:DesignValues xmlns:design="http://www.eclipse.org/datatools/connectivity/oda/design" xmlns:model="http://www.eclipse.org/birt/report/model/adapter/odaModel">
+  <Version>2.0</Version>
+  <design:ResultSets derivedMetaData="true">
+    <design:resultSetDefinitions>
+      <design:resultSetColumns>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>No data set chosen</design:name>
+              <design:position>1</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>1</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+            <design:uiHints>
+              <design:displayName>No data set chosen</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>No data set chosen</design:label>
+            <design:formattingHints>
+              <design:displaySize>-1</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+      </design:resultSetColumns>
+      <design:criteria/>
+    </design:resultSetDefinitions>
+  </design:ResultSets>
+</model:DesignValues>]]></xml-property>
+            <list-property name="privateDriverProperties">
+                <ex-property>
+                    <name>DATA</name>
+                    <value>[["1"]]</value>
+                </ex-property>
+            </list-property>
+        </oda-data-set>
+        <oda-data-set extensionID="org.eclipse.birt.report.data.oda.jdbc.JdbcSelectDataSet" name="countries" id="2128">
+            <property name="nullsOrdering">nulls lowest</property>
+            <list-property name="columnHints">
+                <structure>
+                    <property name="columnName">CUSTOMERS</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="displayName">CUSTOMERS</text-property>
+                    <text-property name="heading">CUSTOMERS</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">COUNTRY</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">COUNTRY</text-property>
+                    <text-property name="heading">COUNTRY</text-property>
+                </structure>
+            </list-property>
+            <structure name="cachedMetaData">
+                <list-property name="resultSet">
+                    <structure>
+                        <property name="position">1</property>
+                        <property name="name">CUSTOMERS</property>
+                        <property name="dataType">integer</property>
+                    </structure>
+                    <structure>
+                        <property name="position">2</property>
+                        <property name="name">COUNTRY</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                </list-property>
+            </structure>
+            <property name="rowFetchLimit">20</property>
+            <property name="dataSource">Classic Models</property>
+            <list-property name="resultSet">
+                <structure>
+                    <property name="position">1</property>
+                    <property name="name">CUSTOMERS</property>
+                    <property name="nativeName">CUSTOMERS</property>
+                    <property name="dataType">integer</property>
+                    <property name="nativeDataType">4</property>
+                </structure>
+                <structure>
+                    <property name="position">2</property>
+                    <property name="name">COUNTRY</property>
+                    <property name="nativeName">COUNTRY</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+            </list-property>
+            <xml-property name="queryText"><![CDATA[select count(customername) as customers, country
+from customers
+group by country]]></xml-property>
+            <xml-property name="designerValues"><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<model:DesignValues xmlns:design="http://www.eclipse.org/datatools/connectivity/oda/design" xmlns:model="http://www.eclipse.org/birt/report/model/adapter/odaModel">
+  <Version>2.0</Version>
+  <design:ResultSets derivedMetaData="true">
+    <design:resultSetDefinitions>
+      <design:resultSetColumns>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>CUSTOMERS</design:name>
+              <design:position>1</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>4</design:nativeDataTypeCode>
+            <design:precision>10</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>NotNullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>CUSTOMERS</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>CUSTOMERS</design:label>
+            <design:formattingHints>
+              <design:displaySize>11</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>COUNTRY</design:name>
+              <design:position>2</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>50</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>COUNTRY</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>COUNTRY</design:label>
+            <design:formattingHints>
+              <design:displaySize>50</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+      </design:resultSetColumns>
+      <design:criteria/>
+    </design:resultSetDefinitions>
+  </design:ResultSets>
+</model:DesignValues>]]></xml-property>
+        </oda-data-set>
+    </data-sets>
+    <themes>
+        <theme name="defaultTheme" id="4">
+            <styles>
+                <style name="report" id="1099">
+                    <property name="fontFamily">"Tahoma"</property>
+                    <property name="fontSize">10pt</property>
+                </style>
+                <style name="topLevelBodyCell" id="1528">
+                    <property name="backgroundColor">#F3F3F3</property>
+                    <property name="borderBottomColor">#FFFFFF</property>
+                    <property name="borderBottomStyle">solid</property>
+                    <property name="borderBottomWidth">1px</property>
+                    <property name="borderLeftColor">#FFFFFF</property>
+                    <property name="borderLeftStyle">solid</property>
+                    <property name="borderLeftWidth">1px</property>
+                    <property name="borderRightColor">#FFFFFF</property>
+                    <property name="borderRightStyle">solid</property>
+                    <property name="borderRightWidth">1px</property>
+                    <property name="borderTopColor">#FFFFFF</property>
+                    <property name="borderTopStyle">solid</property>
+                    <property name="borderTopWidth">1px</property>
+                    <property name="paddingTop">1mm</property>
+                    <property name="paddingLeft">1mm</property>
+                    <property name="paddingBottom">1mm</property>
+                    <property name="paddingRight">1pt</property>
+                </style>
+                <style name="topLevelGrid" id="707">
+                    <property name="fontFamily">"Calibri"</property>
+                    <property name="fontSize">8pt</property>
+                    <property name="borderBottomStyle">none</property>
+                    <property name="borderBottomWidth">0px</property>
+                    <property name="borderLeftStyle">none</property>
+                    <property name="borderLeftWidth">0px</property>
+                    <property name="borderRightStyle">none</property>
+                    <property name="borderRightWidth">0px</property>
+                    <property name="borderTopStyle">none</property>
+                    <property name="borderTopWidth">0px</property>
+                    <property name="marginTop">0pt</property>
+                    <property name="marginLeft">0pt</property>
+                    <property name="marginBottom">0pt</property>
+                    <property name="marginRight">0pt</property>
+                    <property name="paddingTop">0pt</property>
+                    <property name="paddingLeft">0pt</property>
+                    <property name="paddingBottom">0pt</property>
+                    <property name="paddingRight">0pt</property>
+                </style>
+                <style name="topLevelHeadingCell" id="1527">
+                    <property name="backgroundColor">#D2D2D2</property>
+                    <property name="fontSize">larger</property>
+                    <property name="fontWeight">bold</property>
+                    <property name="borderBottomColor">#FFFFFF</property>
+                    <property name="borderBottomStyle">solid</property>
+                    <property name="borderBottomWidth">1px</property>
+                    <property name="borderLeftColor">#FFFFFF</property>
+                    <property name="borderLeftStyle">solid</property>
+                    <property name="borderLeftWidth">1px</property>
+                    <property name="borderRightColor">#FFFFFF</property>
+                    <property name="borderRightStyle">solid</property>
+                    <property name="borderRightWidth">1px</property>
+                    <property name="borderTopColor">#FFFFFF</property>
+                    <property name="borderTopStyle">solid</property>
+                    <property name="borderTopWidth">1px</property>
+                    <property name="paddingTop">2pt</property>
+                    <property name="paddingLeft">2pt</property>
+                    <property name="paddingBottom">2pt</property>
+                    <property name="paddingRight">2pt</property>
+                </style>
+                <style name="MainHeading" id="1575">
+                    <property name="fontFamily">"Arial"</property>
+                    <property name="fontSize">14pt</property>
+                </style>
+                <style name="topLevelSeparatorCell" id="1689"/>
+                <style name="componentLabel" id="1997">
+                    <property name="fontFamily">"Tahoma"</property>
+                    <property name="fontSize">8pt</property>
+                </style>
+                <style name="tableHeader" id="2103">
+                    <property name="fontWeight">bold</property>
+                    <property name="textAlign">left</property>
+                </style>
+            </styles>
+        </theme>
+    </themes>
+    <components>
+        <grid name="_CopyMe" id="1474">
+            <list-property name="userProperties">
+                <structure>
+                    <property name="name">__Width</property>
+                    <property name="type">integer</property>
+                    <property name="isVisible">true</property>
+                </structure>
+                <structure>
+                    <property name="name">__Description</property>
+                    <property name="type">string</property>
+                    <property name="isVisible">true</property>
+                </structure>
+                <structure>
+                    <property name="name">__Thumbnail</property>
+                    <property name="type">string</property>
+                    <property name="isVisible">true</property>
+                </structure>
+                <structure>
+                    <property name="name">__Parameters</property>
+                    <property name="type">string</property>
+                </structure>
+                <structure>
+                    <property name="name">__DescriptionKey</property>
+                    <property name="type">string</property>
+                </structure>
+            </list-property>
+            <property name="__Width">2</property>
+            <property name="__Description">Description not set</property>
+            <property name="__Thumbnail">table.png</property>
+            <property name="style">topLevelGrid</property>
+            <property name="marginTop">0pt</property>
+            <property name="width">100%</property>
+            <column id="1475"/>
+            <row id="1476">
+                <cell id="1477">
+                    <property name="style">topLevelHeadingCell</property>
+                    <label name="NewLabel3213" id="1482">
+                        <property name="fontWeight">bold</property>
+                        <text-property name="text">Title</text-property>
+                    </label>
+                </cell>
+            </row>
+            <row id="1717">
+                <cell id="1718">
+                    <property name="style">topLevelBodyCell</property>
+                </cell>
+            </row>
+        </grid>
+        <grid name="Line" id="2130">
+            <list-property name="userProperties">
+                <structure>
+                    <property name="name">__Width</property>
+                    <property name="type">integer</property>
+                    <property name="isVisible">true</property>
+                </structure>
+                <structure>
+                    <property name="name">__Description</property>
+                    <property name="type">string</property>
+                    <property name="isVisible">true</property>
+                </structure>
+                <structure>
+                    <property name="name">__Thumbnail</property>
+                    <property name="type">string</property>
+                    <property name="isVisible">true</property>
+                </structure>
+                <structure>
+                    <property name="name">__Parameters</property>
+                    <property name="type">string</property>
+                </structure>
+                <structure>
+                    <property name="name">__DescriptionKey</property>
+                    <property name="type">string</property>
+                </structure>
+            </list-property>
+            <property name="__Width">2</property>
+            <property name="__Description">Line</property>
+            <property name="__Thumbnail">table.png</property>
+            <property name="style">topLevelGrid</property>
+            <property name="marginTop">0pt</property>
+            <property name="width">100%</property>
+            <column id="2131"/>
+            <row id="2137">
+                <property name="borderBottomColor">#000000</property>
+                <property name="borderBottomStyle">solid</property>
+                <cell id="2138">
+                    <property name="paddingTop">0mm</property>
+                    <property name="paddingLeft">0mm</property>
+                    <property name="paddingBottom">0mm</property>
+                    <property name="paddingRight">0pt</property>
+                </cell>
+            </row>
+        </grid>
+        <grid name="TestChart" id="2121">
+            <list-property name="userProperties">
+                <structure>
+                    <property name="name">__Width</property>
+                    <property name="type">integer</property>
+                    <property name="isVisible">true</property>
+                </structure>
+                <structure>
+                    <property name="name">__Description</property>
+                    <property name="type">string</property>
+                    <property name="isVisible">true</property>
+                </structure>
+                <structure>
+                    <property name="name">__Thumbnail</property>
+                    <property name="type">string</property>
+                    <property name="isVisible">true</property>
+                </structure>
+                <structure>
+                    <property name="name">__Parameters</property>
+                    <property name="type">string</property>
+                </structure>
+                <structure>
+                    <property name="name">__DescriptionKey</property>
+                    <property name="type">string</property>
+                </structure>
+            </list-property>
+            <property name="__Width">2</property>
+            <property name="__Description">Chart</property>
+            <property name="__Thumbnail">table.png</property>
+            <property name="__Parameters">pChartDataset;pChartCategory;pChartValues</property>
+            <property name="style">topLevelGrid</property>
+            <property name="marginTop">0pt</property>
+            <property name="width">100%</property>
+            <column id="2122"/>
+            <row id="2123">
+                <cell id="2124">
+                    <property name="style">topLevelHeadingCell</property>
+                    <label name="NewLabel32131" id="2125">
+                        <property name="fontWeight">bold</property>
+                        <text-property name="text">Title</text-property>
+                    </label>
+                </cell>
+            </row>
+            <row id="2126">
+                <cell id="2127">
+                    <property name="style">topLevelBodyCell</property>
+                    <grid name="el1" id="25">
+                        <property name="eventHandlerClass">com.actuate.ps.mybirt.eventhandlers.ChartBindingEventHandler</property>
+                        <column id="26"/>
+                        <row id="27">
+                            <cell id="28">
+                                <extended-item extensionName="Chart" name="NewChart" id="24">
+                                    <xml-property name="xmlRepresentation"><![CDATA[<ActuateChart version="2.5.3">
+ <ChartWithAxes version="2.5.3" type="Bar Chart" subType="Side-by-side">
+  <block>
+   <children _type="TitleBlock" visible="false">
+    <outline>
+     <color _nil="1"/>
+    </outline>
+    <label>
+     <background _nil="1"/>
+     <outline>
+      <color _nil="1"/>
+     </outline>
+    </label>
+   </children>
+   <children _type="Plot">
+    <outline>
+     <color _nil="1"/>
+    </outline>
+    <clientArea>
+     <outline>
+      <color _nil="1"/>
+     </outline>
+    </clientArea>
+   </children>
+   <children _type="Legend" visible="false" orientation="0" position="1" itemType="1">
+    <outline>
+     <color _nil="1"/>
+    </outline>
+    <clientArea>
+     <outline>
+      <color _nil="1"/>
+     </outline>
+    </clientArea>
+    <separator>
+     <color _nil="1"/>
+    </separator>
+    <title>
+     <background _nil="1"/>
+     <outline>
+      <color _nil="1"/>
+     </outline>
+    </title>
+   </children>
+   <bounds _body="0.0,0.0,212.0,130.0"/>
+   <outline>
+    <color _nil="1"/>
+   </outline>
+  </block>
+  <extendedProperties name="enable.area.alt" value="false"/>
+  <extendedProperties name="enable.drill.category" value="true"/>
+  <extendedProperties name="enable.drill.series" value="true"/>
+  <sampleData>
+   <baseSampleData dataSetRepresentation="&#039;A&#039;,&#039;B&#039;,&#039;C&#039;,&#039;D&#039;,&#039;E&#039;"/>
+   <orthogonalSampleData dataSetRepresentation="6,4,12,8,10" seriesDefinitionIndex="0"/>
+  </sampleData>
+  <emptyMessage>
+   <caption value="This chart contains no data."/>
+   <background _body=",64,127,127,127"/>
+   <outline>
+    <color _body=",128,127,127,127"/>
+   </outline>
+  </emptyMessage>
+  <axes categoryAxis="true">
+   <title>
+    <background _nil="1"/>
+    <outline>
+     <color _nil="1"/>
+    </outline>
+   </title>
+   <associatedAxes primaryAxis="true" percent="false">
+    <title>
+     <background _nil="1"/>
+     <outline>
+      <color _nil="1"/>
+     </outline>
+    </title>
+    <seriesDefinitions>
+     <query definition=""/>
+     <series _type="BarSeries" seriesIdentifier="Series 1" stacked="false" riser="0">
+      <label>
+       <background _nil="1"/>
+       <outline>
+        <color _nil="1"/>
+       </outline>
+      </label>
+      <dataDefinition definition="1">
+       <grouping enabled="true" aggregateExpression="Count"/>
+      </dataDefinition>
+      <dataPoint separator=", ">
+       <components type="1"/>
+      </dataPoint>
+      <triggers condition="6">
+       <action type="1">
+        <value _type="TooltipValue" text="" delay="200"/>
+       </action>
+      </triggers>
+      <curveFitting _nil="1"/>
+     </series>
+     <grouping _nil="1"/>
+    </seriesDefinitions>
+    <lineAttributes>
+     <color _nil="1"/>
+    </lineAttributes>
+    <label>
+     <background _nil="1"/>
+     <outline>
+      <color _nil="1"/>
+     </outline>
+    </label>
+    <majorGrid>
+     <lineAttributes>
+      <color _nil="1"/>
+     </lineAttributes>
+     <tickAttributes>
+      <color _nil="1"/>
+     </tickAttributes>
+    </majorGrid>
+    <minorGrid>
+     <lineAttributes>
+      <color _nil="1"/>
+     </lineAttributes>
+     <tickAttributes>
+      <color _nil="1"/>
+     </tickAttributes>
+    </minorGrid>
+    <origin>
+     <value _nil="1"/>
+    </origin>
+   </associatedAxes>
+   <seriesDefinitions>
+    <query definition=""/>
+    <series seriesIdentifier="">
+     <label>
+      <background _nil="1"/>
+      <outline>
+       <color _nil="1"/>
+      </outline>
+     </label>
+     <dataDefinition definition="1"/>
+     <dataPoint separator=", ">
+      <components type="1"/>
+     </dataPoint>
+     <curveFitting _nil="1"/>
+    </series>
+    <grouping enabled="true"/>
+    <sortKey/>
+   </seriesDefinitions>
+   <lineAttributes>
+    <color _nil="1"/>
+   </lineAttributes>
+   <label>
+    <background _nil="1"/>
+    <outline>
+     <color _nil="1"/>
+    </outline>
+   </label>
+   <majorGrid>
+    <lineAttributes>
+     <color _nil="1"/>
+    </lineAttributes>
+    <tickAttributes>
+     <color _nil="1"/>
+    </tickAttributes>
+   </majorGrid>
+   <minorGrid>
+    <lineAttributes>
+     <color _nil="1"/>
+    </lineAttributes>
+    <tickAttributes>
+     <color _nil="1"/>
+    </tickAttributes>
+   </minorGrid>
+   <origin>
+    <value _nil="1"/>
+   </origin>
+  </axes>
+  <rotation>
+   <angles/>
+  </rotation>
+ </ChartWithAxes>
+</ActuateChart>
+]]></xml-property>
+                                    <property name="outputFormat">JS</property>
+                                    <property name="inheritColumns">true</property>
+                                    <property name="height">59.53125mm</property>
+                                    <property name="width">190mm</property>
+                                </extended-item>
+                            </cell>
+                        </row>
+                    </grid>
+                </cell>
+            </row>
+        </grid>
+        <grid name="DynTable2" id="2081">
+            <list-property name="userProperties">
+                <structure>
+                    <property name="name">__Width</property>
+                    <property name="type">integer</property>
+                    <property name="isVisible">true</property>
+                </structure>
+                <structure>
+                    <property name="name">__Description</property>
+                    <property name="type">string</property>
+                    <property name="isVisible">true</property>
+                </structure>
+                <structure>
+                    <property name="name">__Thumbnail</property>
+                    <property name="type">string</property>
+                    <property name="isVisible">true</property>
+                </structure>
+                <structure>
+                    <property name="name">__Parameters</property>
+                    <property name="type">string</property>
+                </structure>
+                <structure>
+                    <property name="name">__DescriptionKey</property>
+                    <property name="type">string</property>
+                </structure>
+            </list-property>
+            <property name="__Width">2</property>
+            <property name="__Description">Simple Table</property>
+            <property name="__Thumbnail">table.png</property>
+            <property name="__Parameters">pFields;pDataset;pTitle</property>
+            <property name="__DescriptionKey">CMP_DYNTABLE2</property>
+            <property name="style">topLevelGrid</property>
+            <property name="marginTop">0pt</property>
+            <property name="width">100%</property>
+            <column id="2082"/>
+            <row id="2083">
+                <cell id="2084">
+                    <property name="style">topLevelHeadingCell</property>
+                    <label name="NewLabel321311" id="2085">
+                        <property name="fontWeight">bold</property>
+                        <method name="onCreate"><![CDATA[this.text = this.getParent().getParent().getParent().getUserPropertyValue("pTitle");
+]]></method>
+                        <text-property name="text">Simple Table</text-property>
+                    </label>
+                </cell>
+            </row>
+            <row id="2086">
+                <cell id="2087">
+                    <property name="style">topLevelBodyCell</property>
+                    <table name="NewTable1" id="2089">
+                        <property name="eventHandlerClass">com.actuate.ps.mybirt.eventhandlers.TableBindingEventAdapter</property>
+                        <property name="dataSet">customers</property>
+                        <column id="2102"/>
+                        <header>
+                            <row id="2090">
+                                <property name="style">tableHeader</property>
+                                <cell id="2091"/>
+                            </row>
+                        </header>
+                        <detail>
+                            <row id="2094">
+                                <cell id="2095"/>
+                            </row>
+                        </detail>
+                        <footer>
+                            <row id="2098">
+                                <cell id="2099"/>
+                            </row>
+                        </footer>
+                    </table>
+                </cell>
+            </row>
+        </grid>
+        <grid name="DynTable1" id="2106">
+            <list-property name="userProperties">
+                <structure>
+                    <property name="name">__Width</property>
+                    <property name="type">integer</property>
+                    <property name="isVisible">true</property>
+                </structure>
+                <structure>
+                    <property name="name">__Description</property>
+                    <property name="type">string</property>
+                    <property name="isVisible">true</property>
+                </structure>
+                <structure>
+                    <property name="name">__Thumbnail</property>
+                    <property name="type">string</property>
+                    <property name="isVisible">true</property>
+                </structure>
+                <structure>
+                    <property name="name">__Parameters</property>
+                    <property name="type">string</property>
+                </structure>
+                <structure>
+                    <property name="name">__DescriptionKey</property>
+                    <property name="type">string</property>
+                </structure>
+            </list-property>
+            <property name="__Width">1</property>
+            <property name="__Description">Simple Table</property>
+            <property name="__Thumbnail">table.png</property>
+            <property name="__Parameters">pFields;pDataset;pTitle</property>
+            <property name="__DescriptionKey">CMP_DYNTABLE1</property>
+            <property name="style">topLevelGrid</property>
+            <property name="marginTop">0pt</property>
+            <property name="width">100%</property>
+            <column id="2107"/>
+            <row id="2108">
+                <cell id="2109">
+                    <property name="style">topLevelHeadingCell</property>
+                    <label name="NewLabel3213111" id="2110">
+                        <property name="fontWeight">bold</property>
+                        <method name="onCreate"><![CDATA[this.text = this.getParent().getParent().getParent().getUserPropertyValue("pTitle");
+]]></method>
+                        <text-property name="text">Simple Table</text-property>
+                    </label>
+                </cell>
+            </row>
+            <row id="2111">
+                <cell id="2112">
+                    <property name="style">topLevelBodyCell</property>
+                    <table name="NewTable11" id="2113">
+                        <property name="eventHandlerClass">com.actuate.ps.mybirt.eventhandlers.TableBindingEventAdapter</property>
+                        <property name="dataSet">customers</property>
+                        <column id="2120"/>
+                        <header>
+                            <row id="2114">
+                                <property name="style">tableHeader</property>
+                                <cell id="2115"/>
+                            </row>
+                        </header>
+                        <detail>
+                            <row id="2116">
+                                <cell id="2117"/>
+                            </row>
+                        </detail>
+                        <footer>
+                            <row id="2118">
+                                <cell id="2119"/>
+                            </row>
+                        </footer>
+                    </table>
+                </cell>
+            </row>
+        </grid>
+    </components>
+    <page-setup>
+        <simple-master-page name="SMP_STANDARD" id="140">
+            <property name="comments">Cols=2;</property>
+            <property name="type">a4</property>
+            <property name="topMargin">10mm</property>
+            <property name="leftMargin">10mm</property>
+            <property name="bottomMargin">10mm</property>
+            <property name="rightMargin">10mm</property>
+            <property name="backgroundColor">#F3F3F3</property>
+            <property name="headerHeight">0in</property>
+            <page-footer>
+                <grid id="196">
+                    <property name="fontFamily">"Arial"</property>
+                    <property name="width">100%</property>
+                    <column id="197"/>
+                    <column id="198"/>
+                    <row id="1939">
+                        <cell id="1940">
+                            <property name="colSpan">2</property>
+                            <property name="rowSpan">1</property>
+                            <image name="NewImage44" id="1942">
+                                <property name="height">2px</property>
+                                <property name="width">18.8cm</property>
+                                <property name="source">file</property>
+                                <expression name="uri" type="constant">images/stripe.png</expression>
+                            </image>
+                        </cell>
+                    </row>
+                    <row id="199">
+                        <cell id="200">
+                            <text name="NewText" id="720">
+                                <property name="fontFamily">"Arial"</property>
+                                <property name="fontWeight">normal</property>
+                                <property name="marginTop">0pt</property>
+                                <property name="contentType">html</property>
+                                <text-property name="content"><![CDATA[<B>Created on:</B> <value-of>new Date()</value-of>]]></text-property>
+                            </text>
+                        </cell>
+                        <cell id="201">
+                            <auto-text id="188">
+                                <property name="textAlign">right</property>
+                                <property name="type">page-number</property>
+                            </auto-text>
+                        </cell>
+                    </row>
+                </grid>
+            </page-footer>
+        </simple-master-page>
+        <simple-master-page name="SMP_LANDSCAPE" id="1968">
+            <property name="comments">Cols=3;</property>
+            <property name="type">a4</property>
+            <property name="orientation">landscape</property>
+            <property name="topMargin">10mm</property>
+            <property name="leftMargin">10mm</property>
+            <property name="bottomMargin">10mm</property>
+            <property name="rightMargin">10mm</property>
+            <property name="backgroundColor">#F3F3F3</property>
+            <property name="headerHeight">0in</property>
+            <page-footer>
+                <grid name="NewGrid" id="1969">
+                    <property name="fontFamily">"Arial"</property>
+                    <property name="width">100%</property>
+                    <column id="1970"/>
+                    <column id="1971"/>
+                    <row id="1972">
+                        <cell id="1973">
+                            <property name="colSpan">2</property>
+                            <property name="rowSpan">1</property>
+                            <image name="NewImage441" id="1974">
+                                <property name="height">2px</property>
+                                <property name="width">18.8cm</property>
+                                <property name="source">file</property>
+                                <expression name="uri" type="constant">images/stripe.png</expression>
+                            </image>
+                        </cell>
+                    </row>
+                    <row id="1975">
+                        <cell id="1976">
+                            <text name="NewText4" id="1977">
+                                <property name="fontFamily">"Arial"</property>
+                                <property name="fontWeight">normal</property>
+                                <property name="marginTop">0pt</property>
+                                <property name="contentType">html</property>
+                                <text-property name="content"><![CDATA[<B>Created on:</B> <value-of>new Date()</value-of>]]></text-property>
+                            </text>
+                        </cell>
+                        <cell id="1978">
+                            <auto-text name="NewAutoText" id="1979">
+                                <property name="textAlign">right</property>
+                                <property name="type">page-number</property>
+                            </auto-text>
+                        </cell>
+                    </row>
+                </grid>
+            </page-footer>
+        </simple-master-page>
+        <simple-master-page name="5ColumnPage" id="2129">
+            <property name="comments">Cols=5;</property>
+        </simple-master-page>
+    </page-setup>
+</library>
